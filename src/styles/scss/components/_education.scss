@@ -1,0 +1,33 @@
+.education{
+    h2{
+        margin-bottom: 0;
+    }
+}
+
+.education-container{
+    $carrers: 5;
+    background-color: map-get($colors, button-color);
+    padding: 1em .5em;
+
+    .carrer:nth-of-type(-n+#{$carrers}){
+        margin-bottom: 1rem;
+
+        @include media-quarie(medium){
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.carrer{
+    color: map-get($colors, primary-color);
+
+    h3{
+        text-transform: uppercase;
+    }
+
+    .period{
+        background-color: map-get($colors, secondary-color);
+        width: fit-content;
+        padding: .5em;
+    }
+}

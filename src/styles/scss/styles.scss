@@ -1,0 +1,24 @@
+@import "config/variables";
+@import "config/functions";
+@import "config/mixins";
+@import "layout/layout";
+@import "base/base";
+@import "components/buttons";
+@import "components/header";
+@import "components/banner";
+@import "components/about-me";
+@import "components/skills";
+@import "components/education";
+@import "components/contact";
+@import "components/message-form";
+@import "components/footer";
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-size);
+    scroll-snap-type: y proximity;
+}
+
+section{
+    scroll-snap-align: start;
+}

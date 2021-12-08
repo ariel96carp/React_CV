@@ -1,0 +1,52 @@
+.contact{
+    color: map-get($colors, primary-color);
+    background-color: map-get($colors, secondary-color);
+
+    .title{
+        margin-bottom: 0;
+    }
+}
+
+.contact-container{
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    
+    @include media-quarie(medium){
+        grid-template-columns: repeat(auto-fit, minmax(px-to-rem(400px), 1fr));
+        margin-top: 3rem;
+    }
+}
+
+.contact-info, .contact-form{
+    h2{
+        margin-bottom: 1.5rem;
+
+        @include media-quarie(medium){
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+
+.contact-box{
+    .type{
+        color: map-get($colors, button-color);
+        margin-bottom: 0;
+    }
+
+    .info{
+        margin-top: 0;
+    }
+
+    &:nth-of-type(-n + 3){
+        margin-bottom: 1.5rem;
+
+        @include media-quarie(medium){
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+
+.map-container{
+    @include responsive-ratio(16, 9, iframe);
+}

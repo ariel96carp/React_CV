@@ -1,0 +1,27 @@
+.about-me{
+    min-height: calc(100vh - var(--header-size));
+    
+    .title{
+        font-family: var(--medium-font);
+    }
+
+    img{
+        width: 100%;
+    }
+}
+
+.section-grid{
+    display: grid;
+    gap: 1rem;
+
+    @include media-quarie(medium){
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+.description{
+    h3{
+        font-family: var(--bold-font);
+    }
+}

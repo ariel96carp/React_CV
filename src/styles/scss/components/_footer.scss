@@ -1,0 +1,13 @@
+footer{
+    background-color: black;
+    color: map-get($colors, primary-color);
+
+    p{
+        font-size: .8em;
+        padding: .5em 0;
+
+        @include media-quarie(medium){
+            padding: .75em 0;
+        }
+    }
+}

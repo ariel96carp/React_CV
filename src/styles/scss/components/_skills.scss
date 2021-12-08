@@ -1,0 +1,40 @@
+.skills{
+    background-color: map-get($colors, secondary-color);
+    color: map-get($colors, primary-color);
+
+    .wrapper{
+        h2{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-top: 1rem;
+
+    .card{
+        flex: 1 1 px-to-rem(250px)
+    }
+
+    @include media-quarie(medium){
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+}
+
+.card{
+    background-color: map-get($colors, quaternary-color);
+    padding: 1em 0;
+    border-radius: 3px;
+
+    img{
+        width: 8em;
+    }
+
+    .type{
+        margin-top: 1em;
+    }
+}

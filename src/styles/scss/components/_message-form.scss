@@ -1,0 +1,159 @@
+.message-form{
+    .input{
+        margin-bottom: .75rem;
+    }
+
+    .button{
+        padding: 1em;
+    }
+}
+
+.input{
+    input, textarea{
+        border: 0;
+        outline: 0;
+        width: 100%;
+        padding: 1em;
+        font-family: var(--regular-font);
+        background-color: map-get($colors, quaternary-color);
+        color: map-get($colors, primary-color);
+    }
+    
+    textarea{
+        resize: none;
+        height: 20rem;
+
+        @include media-quarie(medium){
+            height: 30rem;
+        }
+    }
+}
+
+.form-message{
+    font-size: .75em;
+    margin-top: .5em;
+
+    &.error{
+        color:hsl(8, 100, 47);
+    }
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: var(--z-modal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+
+    .content{
+        display: none;
+        height: 60%;
+        background-color: map-get($colors, primary-color);
+        color: map-get($colors, secondary-color);
+
+        @include media-quarie(medium){
+            height: 70%;
+        }
+    }
+
+    &.active{
+        opacity: 1;
+        pointer-events: auto;
+        transition: opacity .75s;
+    }
+}
+
+.content{
+    .icon{
+        height: 30%;
+        background-color: hsl(160, 29%, 86%);
+        border-radius: 0 0 35% 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: px-to-rem(20px);
+    }
+
+    .message{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2, p{
+        margin: 0;
+    }
+
+    p{
+        margin-top: .75em;
+    }
+
+    button{
+        margin-top: 2.5rem;
+        padding: .75em 3.5em;
+        border-radius: 3px;
+        font-family: var(--medium-font);
+
+        @include media-quarie(medium){
+            margin-top: 3rem;
+        }
+    }
+}
+
+.icon{
+    img{
+        width: 7em;
+    }
+}
+
+.error{
+    color:hsl(8, 100, 47);
+}
+
+.loader-content{
+    .loader{
+        --size: 8rem;
+        --border-size: 5px;
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        border: var(--border-size) solid map-get($colors, primary-color);
+        border-top: var(--border-size) solid map-get($colors, button-color);
+        animation: loader .8s linear infinite;
+    
+        @keyframes loader {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    
+        @include media-quarie(medium){
+            --size: 10rem;
+        }
+    }
+
+    .message{
+        font-size: 1.2em;
+        animation: message 1s alternate infinite ease-in-out;
+    
+        @keyframes message {
+            0%{
+                opacity: .2;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    }
+}
+

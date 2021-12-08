@@ -1,0 +1,7 @@
+button,.button{
+    background-color: map-get($colors, button-color);
+    color: map-get($colors, primary-color);
+    border: 1px solid map-get($colors, button-color);
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+}

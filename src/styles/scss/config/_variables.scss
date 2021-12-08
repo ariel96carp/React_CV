@@ -1,0 +1,69 @@
+// PUNTOS DE QUIEBRE
+$breakpoints:(
+    small: 320px,
+    medium: 640px,
+    large: 1024px,
+    xlarge: 1440px
+);
+
+// VARIABLES DEL CONTENEDOR (WRAPPER)
+$min-wrapper-width : map-get($breakpoints, small);
+$max-wrapper-width : 1200px;
+
+// VARIABLES DE APILAMIENTO
+:root{
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+// PALETA DE COLORES
+$colors:(
+    primary-color: white,
+    secondary-color: hsl(33, 0, 8),
+    tertiary-color: hsl(202, 0, 35),
+    quaternary-color: hsl(202, 0%, 13%),
+    button-color: hsl(202, 100, 43)
+);
+
+// TAMAÑO DEL HEADER
+:root{
+    --header-size: 3.5rem;
+
+    @media screen and (min-width: map-get($breakpoints, medium)){
+        --header-size: 4rem;
+    }
+}
+
+// FUENTES
+@font-face{
+    font-family: "regular-font";
+    font-style: normal;
+    font-weight: 400;
+    font-display: fallback;
+    src: local("poppins-regular"), local("Poppins"), url(../fonts/Poppins-Regular.ttf);
+}
+
+@font-face{
+    font-family: "medium-font";
+    font-style: normal;
+    font-weight: 500;
+    font-display: fallback;
+    src: local("poppins-medium"), local("Poppins-Medium"), url(../fonts/Poppins-Medium.ttf);
+} 
+
+@font-face{
+    font-family: "bold-font";
+    font-style: normal;
+    font-weight: 700;
+    font-display: fallback;
+    src: local("poppins-bold"), local("Poppins-Bold"), url(../fonts/Poppins-Bold.ttf);
+}
+
+:root{
+    --regular-font: "regular-font", sans serif;
+    --medium-font: "medium-font", sans serif;
+    --bold-font: "bold-font", san serif;
+}
