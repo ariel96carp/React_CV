@@ -21,7 +21,17 @@
 }
 
 .description{
-    h3{
+    .title{
         font-family: var(--bold-font);
+    }
+
+    .download{
+        text-transform: uppercase;
+        color: map-get($colors, secondary-color);
+        font-family: var(--medium-font);
+
+        &::before{
+            background-image: url(../img/documento.png);
+        }
     }
 }

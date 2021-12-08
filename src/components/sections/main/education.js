@@ -4,7 +4,7 @@ const Education = () => {
     return (
         <section className="education section-padding" id="educationSection">
                 <h2 className="center-content">Formación</h2>
-                <p className="center-content">asdasdasdasdasdas</p>
+                <p className="center-content">Educación y cursos realizados</p>
                 <div className="education-container">
                     <div className="wrapper l-60 m-80 center-block">
                         <Carrer
@@ -36,7 +36,12 @@ const Education = () => {
                             title="CSS Avanzado"
                             institute="EDteam (Plataforma de Educación Online)"
                             time="14 horas"
-                            period="2021" />   
+                            period="2021" />
+                        <Carrer
+                            title="React Desde Cero"
+                            institute="EDteam (Plataforma de Educación Online)"
+                            time="7 horas"
+                            period="2021" />    
                     </div>
                 </div>
         </section>

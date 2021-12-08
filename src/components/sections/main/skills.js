@@ -14,7 +14,9 @@ const skillSection = () => {
         <section className="skills section-padding" id="skillsSection">
             <div className="wrapper center-content">
                 <h2>Mis habilidades</h2>
-                <p>sdasdadadadasd</p>
+                <p>
+                    Conocimientos en lenguajes, frameworks y herramientas de trabajo.
+                </p>
                 <div className="cards-container l-60 m-80 center-block">
                     <Skill tecnology="JavaScript" level="Intermedio" image={jsImage} />
                     <Skill tecnology="CSS" level="Intermedio" image={cssImage} />

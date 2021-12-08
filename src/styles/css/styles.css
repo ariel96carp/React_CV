@@ -582,8 +582,18 @@ header .nav.show {
   }
 }
 
-.description h3 {
+.description .title {
   font-family: var(--bold-font);
+}
+
+.description .download {
+  text-transform: uppercase;
+  color: #141414;
+  font-family: var(--medium-font);
+}
+
+.description .download::before {
+  background-image: url(../img/documento.png);
 }
 
 .skills {
@@ -636,12 +646,12 @@ header .nav.show {
   padding: 1em .5em;
 }
 
-.education-container .carrer:nth-of-type(-n+5) {
+.education-container .carrer:nth-of-type(-n+6) {
   margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 40rem) {
-  .education-container .carrer:nth-of-type(-n+5) {
+  .education-container .carrer:nth-of-type(-n+6) {
     margin-bottom: 2rem;
   }
 }
@@ -711,6 +721,10 @@ header .nav.show {
   }
 }
 
+.contact-box a {
+  color: #5f00a3;
+}
+
 .map-container {
   display: grid;
   grid-template-columns: repeat(16, 1fr);
@@ -730,6 +744,45 @@ header .nav.show {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.detail {
+  display: flex;
+  gap: 2rem;
+}
+
+.detail .detail-image {
+  --image-size: 3em;
+  width: var(--image-size);
+  height: var(--image-size);
+  background-color: white;
+  mask-size: 1.7rem;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+@media screen and (min-width: 40rem) {
+  .detail .detail-image {
+    mask-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  .detail {
+    gap: 3rem;
+  }
+}
+
+.contact-box:first-of-type .detail .detail-image {
+  mask-image: url(../img/direccion.png);
+}
+
+.contact-box:nth-of-type(2) .detail .detail-image {
+  mask-image: url(../img/llamada-telefonica.png);
+}
+
+.contact-box:nth-of-type(3) .detail .detail-image {
+  mask-image: url(../img/email1.png);
 }
 
 .message-form .input {

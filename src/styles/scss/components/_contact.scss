@@ -45,8 +45,62 @@
             margin-bottom: 2.5rem;
         }
     }
+
+    a{
+        color: hsl(275, 100%, 32%);
+    }
 }
 
 .map-container{
     @include responsive-ratio(16, 9, iframe);
 }
+
+.detail{
+    display: flex;
+    gap: 2rem;
+
+    .detail-image{
+        --image-size: 3em;
+        width: var(--image-size);
+        height: var(--image-size);
+        background-color: map-get($colors, primary-color);
+        mask-size: 1.7rem;
+        mask-repeat: no-repeat;
+        mask-position: center;
+
+        @include media-quarie(medium){
+            mask-size: 2rem;
+        }
+    }
+
+    @include media-quarie(medium){
+        gap: 3rem;
+    }
+}
+
+.contact-box{
+    &:first-of-type{
+        .detail{
+            .detail-image{
+                mask-image: url(../img/direccion.png);
+            }
+        }
+    }
+
+    &:nth-of-type(2){
+        .detail{
+            .detail-image{
+                mask-image: url(../img/llamada-telefonica.png);
+            }
+        }
+    }
+
+    &:nth-of-type(3){
+        .detail{
+            .detail-image{
+                mask-image: url(../img/email1.png);
+            }
+        }
+    }
+}
+
