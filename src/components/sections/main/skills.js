@@ -8,6 +8,7 @@ import csharpImage from "../../img/c-sharp.png"
 import sqlImage from "../../img/sql.png"
 import gitImage from "../../img/github.png"
 import cImage from "../../img/c-.png"
+import gScriptImage from "../../img/secuencia-de-comandos-de-aplicaciones-de-google.png"
 
 const skillSection = () => {
     return (
@@ -27,6 +28,7 @@ const skillSection = () => {
                     <Skill tecnology="SQL" level="Básico" image={sqlImage} />
                     <Skill tecnology="GIT" level="Intermedio" image={gitImage} />
                     <Skill tecnology="C++" level="Básico" image={cImage} />
+                    <Skill tecnology="GoogleScript" level="Intemedio" image={gScriptImage} />
                 </div>
             </div>
         </section>

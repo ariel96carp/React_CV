@@ -5,6 +5,8 @@
 body{
     margin: 0;
     padding: 0;
+    @include fluid-typography(small, large, px-to-rem(12px), px-to-rem(17px));
+    font-family: var(--regular-font);
 }
 
 #root{
@@ -12,8 +14,6 @@ body{
     min-height: calc(100vh - var(--header-size));
     display: grid;
     grid-template-rows: auto min-content;
-    @include fluid-typography(small, large, px-to-rem(12px), px-to-rem(17px));
-    font-family: var(--regular-font);
 }
 
 ul{

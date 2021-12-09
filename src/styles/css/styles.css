@@ -298,6 +298,20 @@
 body {
   margin: 0;
   padding: 0;
+  font-size: 0.75rem;
+  font-family: var(--regular-font);
+}
+
+@media screen and (min-width: 20rem) {
+  body {
+    font-size: calc(0.75rem + (0.3125) * ((100vw - 20rem) / 44));
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  body {
+    font-size: 1.0625rem;
+  }
 }
 
 #root {
@@ -305,20 +319,6 @@ body {
   min-height: calc(100vh - var(--header-size));
   display: grid;
   grid-template-rows: auto min-content;
-  font-size: 0.75rem;
-  font-family: var(--regular-font);
-}
-
-@media screen and (min-width: 20rem) {
-  #root {
-    font-size: calc(0.75rem + (0.3125) * ((100vw - 20rem) / 44));
-  }
-}
-
-@media screen and (min-width: 64rem) {
-  #root {
-    font-size: 1.0625rem;
-  }
 }
 
 ul {
@@ -350,6 +350,7 @@ button, .button {
 }
 
 header {
+  --background-transition: background-color .5s;
   --toggle-color: white;
   position: fixed;
   top: 0;
@@ -359,7 +360,7 @@ header {
   z-index: var(--z-fixed);
   background-color: #141414;
   color: white;
-  transition: background-color .5s;
+  transition: var(--background-transition);
 }
 
 header.scroll-header {
@@ -385,15 +386,23 @@ header.scroll-header::after {
   content: "";
   display: block;
   position: absolute;
-  top: 95%;
+  top: 85%;
   left: 50%;
-  width: 90%;
+  width: 92%;
   height: 1rem;
   border-radius: 100%;
   background-color: grey;
   transform: translateX(-50%);
   filter: blur(3px) opacity(0.25);
   z-index: var(--z-back);
+  /* EL PSEUDOELEMENTO "AFTER" SE UBICA POR DETRAS DEL CONTENEDOR DEL HEADER (WRAPPER),
+            NO DEL HEADER. */
+}
+
+@media screen and (min-width: 40rem) {
+  header.scroll-header::after {
+    width: 88%;
+  }
 }
 
 header .wrapper {
@@ -401,6 +410,17 @@ header .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #141414;
+  transition: var(--background-transition);
+  /* COMO, POR UNA CUESTION DE APILAMIENTO, NO PUEDO UBICAR EL PSEUDOELEMENTO "AFTER" 
+        POR DETRAS DEL HEADER; SIMULO ESTA ACCION UBICANDOLO POR DETRAS DE SU CONTENEDOR 
+        (WRAPPER). PARA QUE LA MISMA SURJA EFECTO, ES NECESARIO PINTAR EL FONDO DEL CONTENDOR
+        CON EL MISMO COLOR DEL HEADER. DE ESTA FORMA, SE CREARA EL EFECTO DE QUE EL PSEUDOELEMENTO
+        SE UBICA POR DETRAS DEL HEADER, CUANDO EN REALIDAD LO HACE POR DETRAS DEL WRAPPER. */
+}
+
+header .wrapper.scroll-wrapper {
+  background-color: white;
 }
 
 header .title {
@@ -577,7 +597,7 @@ header .nav.show {
 
 @media screen and (min-width: 40rem) {
   .section-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(21.875rem, 1fr));
     gap: 2rem;
   }
 }

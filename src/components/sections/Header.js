@@ -4,6 +4,7 @@ import { HashLink } from "react-router-hash-link"
 const Header = () => {
     const navMenu = useRef()
     const mainHeader = useRef()
+    const headerWrapper = useRef()
     useEffect(() => {
         const updateScroll = () => {
             const menu = navMenu.current.querySelector(".menu")
@@ -13,6 +14,7 @@ const Header = () => {
                 if (!mainHeader.current.classList.contains("scroll-header"))
                 {
                     mainHeader.current.classList.add("scroll-header")
+                    headerWrapper.current.classList.add("scroll-wrapper")
                     menu.classList.add("scroll-menu")
                 }
             }
@@ -21,6 +23,7 @@ const Header = () => {
                 if (mainHeader.current.classList.contains("scroll-header"))
                 {
                     mainHeader.current.removeAttribute("class")
+                    headerWrapper.current.classList.remove("scroll-wrapper")
                     menu.classList.remove("scroll-menu")
                 }
             }
@@ -40,6 +43,7 @@ const Header = () => {
                 if (navMenu.current.classList.contains("show"))
                 {
                     navMenu.current.classList.remove("show")
+                    document.body.style.overflow = "visible"
                 }
             }
         }
@@ -72,7 +76,7 @@ const Header = () => {
 
     return (
         <header ref={mainHeader}>
-            <div className="wrapper">
+            <div className="wrapper" ref={headerWrapper}>
                 <HashLink to="/#bannerSection" className="title">PORTFOLIO</HashLink>
                 <div className="menu-toggle" onClick={toggleMenu}>
                     <div className="middle"></div>

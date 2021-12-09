@@ -1,4 +1,6 @@
 header{
+    --background-transition: background-color .5s; 
+    // TRANSICION QUE SE VA A UTILIZAR EN EL HEADER Y SU RESPECTIVO CONTENEDOR (WRAPPER).
     --toggle-color: white;
     position: fixed;
     top: 0;
@@ -8,11 +10,10 @@ header{
     z-index: var(--z-fixed);
     background-color: map-get($colors, secondary-color);
     color: map-get($colors, primary-color);
-    transition: background-color .5s;
+    transition: var(--background-transition);
 
     &.scroll-header{
         --toggle-color: black;
-
         background-color: map-get($colors, primary-color);
         
         a{
@@ -31,23 +32,42 @@ header{
             content: "";
             display: block;
             position: absolute;
-            top: 95%;
+            top: 85%;
             left: 50%;
-            width: 90%;
+            width: 92%;
             height: 1rem;
             border-radius: 100%;        
             background-color: grey;
             transform: translateX(-50%);
             filter: blur(3px) opacity(0.25);
             z-index: var(--z-back);
+            /* EL PSEUDOELEMENTO "AFTER" SE UBICA POR DETRAS DEL CONTENEDOR DEL HEADER (WRAPPER),
+            NO DEL HEADER. */
+
+            @include media-quarie(medium){
+                width: 88%;
+            }
         }
     }
 
     .wrapper{
+        $background-color: map-get($colors, secondary-color);
         height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background-color: $background-color;
+        transition: var(--background-transition);
+
+        &.scroll-wrapper{
+            $background-color: map-get($colors, primary-color);
+            background-color: $background-color;
+        }
+        /* COMO, POR UNA CUESTION DE APILAMIENTO, NO PUEDO UBICAR EL PSEUDOELEMENTO "AFTER" 
+        POR DETRAS DEL HEADER; SIMULO ESTA ACCION UBICANDOLO POR DETRAS DE SU CONTENEDOR 
+        (WRAPPER). PARA QUE LA MISMA SURJA EFECTO, ES NECESARIO PINTAR EL FONDO DEL CONTENDOR
+        CON EL MISMO COLOR DEL HEADER. DE ESTA FORMA, SE CREARA EL EFECTO DE QUE EL PSEUDOELEMENTO
+        SE UBICA POR DETRAS DEL HEADER, CUANDO EN REALIDAD LO HACE POR DETRAS DEL WRAPPER. */
     }
 
     .title{

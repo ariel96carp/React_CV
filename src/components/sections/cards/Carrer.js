@@ -1,3 +1,5 @@
+import PropTypes from "prop-types"
+
 const Carrer = ({ title, institute, time, period }) => {
     return (
         <div className="carrer">
@@ -7,6 +9,13 @@ const Carrer = ({ title, institute, time, period }) => {
             <p className="period">{period}</p>
         </div>
     )
+}
+
+Carrer.propTypes={
+    title: PropTypes.string.isRequired,
+    institute: PropTypes.string.isRequired,
+    time: PropTypes.string.isRequired,
+    period: PropTypes.string.isRequired
 }
 
 export default Carrer
