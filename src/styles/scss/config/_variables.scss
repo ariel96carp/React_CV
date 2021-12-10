@@ -43,7 +43,7 @@ $colors:(
     font-style: normal;
     font-weight: 400;
     font-display: fallback;
-    src: local("poppins-regular"), local("Poppins"), url(../fonts/Poppins-Regular.ttf);
+    src: local("poppins-regular"), local("Poppins"), url(../fonts/Poppins-Regular.woff);
 }
 
 @font-face{
@@ -51,7 +51,7 @@ $colors:(
     font-style: normal;
     font-weight: 500;
     font-display: fallback;
-    src: local("poppins-medium"), local("Poppins-Medium"), url(../fonts/Poppins-Medium.ttf);
+    src: local("poppins-medium"), local("Poppins-Medium"), url(../fonts/Poppins-Medium.woff);
 } 
 
 @font-face{
@@ -59,7 +59,7 @@ $colors:(
     font-style: normal;
     font-weight: 700;
     font-display: fallback;
-    src: local("poppins-bold"), local("Poppins-Bold"), url(../fonts/Poppins-Bold.ttf);
+    src: local("poppins-bold"), local("Poppins-Bold"), url(../fonts/Poppins-Bold.woff);
 }
 
 :root{
