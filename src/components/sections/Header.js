@@ -29,9 +29,9 @@ const Header = () => {
             }
         }
 
-        addEventListener("scroll", updateScroll)
+        window.addEventListener("scroll", updateScroll)
         return (() => {
-            removeEventListener("scroll", updateScroll)
+            window.removeEventListener("scroll", updateScroll)
         })
     }, [])
 
@@ -48,9 +48,9 @@ const Header = () => {
             }
         }
 
-        addEventListener("resize", hideMenu)
+        window.addEventListener("resize", hideMenu)
         return (() => {
-            removeEventListener("resize", hideMenu)
+            window.removeEventListener("resize", hideMenu)
         })
     }, [])
 
