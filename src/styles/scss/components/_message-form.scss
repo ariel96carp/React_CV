@@ -19,10 +19,6 @@
         font-family: var(--regular-font);
         background-color: map-get($colors, quaternary-color);
         color: map-get($colors, primary-color);
-
-        &::placeholder{
-            font-size: 1em;
-        }
     }
     
     textarea{
