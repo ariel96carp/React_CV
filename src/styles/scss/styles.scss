@@ -16,7 +16,10 @@
 html{
     scroll-behavior: smooth;
     scroll-padding-top: var(--header-size);
-    scroll-snap-type: y proximity;
+
+    @include media-quarie(medium){
+        scroll-snap-type: y proximity;
+    }
 }
 
 section{

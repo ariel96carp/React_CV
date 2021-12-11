@@ -4,4 +4,7 @@ button,.button{
     border: 1px solid map-get($colors, button-color);
     padding: 0.5em 1.5em;
     cursor: pointer;
+    width: fit-content;
+    text-transform: uppercase;
+    letter-spacing: .05em;
 }

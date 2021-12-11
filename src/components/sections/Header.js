@@ -77,7 +77,12 @@ const Header = () => {
     return (
         <header ref={mainHeader}>
             <div className="wrapper" ref={headerWrapper}>
-                <HashLink to="/#bannerSection" className="title">PORTFOLIO</HashLink>
+                <HashLink 
+                    to="/#bannerSection" 
+                    className="title"
+                    onClick={hideMenuFromItem}>
+                    PORTFOLIO
+                </HashLink>
                 <div className="menu-toggle" onClick={toggleMenu}>
                     <div className="middle"></div>
                 </div>
