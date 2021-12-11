@@ -38,7 +38,7 @@
         margin-top: 0;
     }
 
-    &:nth-of-type(-n + 3){
+    &:nth-of-type(-n + 4){
         margin-bottom: 1.5rem;
 
         @include media-quarie(medium){
@@ -47,7 +47,7 @@
     }
 
     a{
-        color: hsl(275, 100%, 32%);
+        color: hsl(275, 100%, 43%);
     }
 }
 

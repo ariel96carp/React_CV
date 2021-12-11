@@ -54,6 +54,14 @@ const Contact = () => {
                             </div>
                         </div>
                         <div className="contact-box">
+                            <h3 className="type">Mi repositorio</h3>
+                            <a
+                                href="https://github.com/ariel96carp"
+                                target="_blank"
+                                rel="noreferrer">
+                            https://github.com/ariel96carp</a>
+                        </div>
+                        <div className="contact-box">
                             <h3 className="type">Este repositorio</h3>
                             <a 
                                 href="https://github.com/ariel96carp/React_CV" 

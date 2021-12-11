@@ -727,18 +727,18 @@ header .nav.show {
   margin-top: 0;
 }
 
-.contact-box:nth-of-type(-n + 3) {
+.contact-box:nth-of-type(-n + 4) {
   margin-bottom: 1.5rem;
 }
 
 @media screen and (min-width: 40rem) {
-  .contact-box:nth-of-type(-n + 3) {
+  .contact-box:nth-of-type(-n + 4) {
     margin-bottom: 2.5rem;
   }
 }
 
 .contact-box a {
-  color: #5f00a3;
+  color: #8000db;
 }
 
 .map-container {
