@@ -1,3 +1,4 @@
+// ESTILOS DEL FORMULARIO
 .message-form{
     .input{
         margin-bottom: .75rem;
@@ -18,6 +19,10 @@
         font-family: var(--regular-font);
         background-color: map-get($colors, quaternary-color);
         color: map-get($colors, primary-color);
+
+        &::placeholder{
+            font-size: 1em;
+        }
     }
     
     textarea{
@@ -39,6 +44,7 @@
     }
 }
 
+// ESTILOS DEL MODAL
 .modal{
     position: fixed;
     top: 0;
