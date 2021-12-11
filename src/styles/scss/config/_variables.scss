@@ -58,8 +58,8 @@ $colors:(
     src: 
         local("poppins-medium"), 
         local("Poppins-Medium"), 
-        url(../fonts/Poppins-Medium.ttf)
-        format("truetype");
+        url(../fonts/Poppins-Medium.woff2)
+        format("woff2");
 } 
 
 @font-face{
@@ -70,8 +70,8 @@ $colors:(
     src: 
         local("poppins-bold"), 
         local("Poppins-Bold"), 
-        url(../fonts/Poppins-Bold.ttf)
-        format("truetype");
+        url(../fonts/Poppins-Bold.woff2)
+        format("woff2");
 }
 
 :root{
