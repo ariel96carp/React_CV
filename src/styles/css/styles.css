@@ -344,7 +344,7 @@ h1, h2, h3, h4, h5, h6 {
 button, .button {
   background-color: #008bdb;
   color: white;
-  border: 1px solid #008bdb;
+  border: none;
   padding: 0.5em 1.5em;
   cursor: pointer;
   width: fit-content;
@@ -836,12 +836,12 @@ header .nav.show {
   }
 }
 
-.form-message {
+.input-message {
   font-size: .75em;
   margin-top: .5em;
 }
 
-.form-message.error {
+.input-message.error {
   color: #f02000;
 }
 
@@ -860,68 +860,10 @@ header .nav.show {
   pointer-events: none;
 }
 
-.modal .content {
-  display: none;
-  height: 60%;
-  background-color: white;
-  color: #141414;
-}
-
-@media screen and (min-width: 40rem) {
-  .modal .content {
-    height: 70%;
-  }
-}
-
 .modal.active {
   opacity: 1;
   pointer-events: auto;
   transition: opacity .75s;
-}
-
-.content .icon {
-  height: 30%;
-  background-color: #d1e6df;
-  border-radius: 0 0 35% 35%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1.25rem;
-}
-
-.content .message {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.content h2, .content p {
-  margin: 0;
-}
-
-.content p {
-  margin-top: .75em;
-}
-
-.content button {
-  margin-top: 2.5rem;
-  padding: .75em 3.5em;
-  border-radius: 3px;
-  font-family: var(--medium-font);
-}
-
-@media screen and (min-width: 40rem) {
-  .content button {
-    margin-top: 3rem;
-  }
-}
-
-.icon img {
-  width: 7em;
-}
-
-.error {
-  color: #f02000;
 }
 
 footer {
@@ -979,6 +921,72 @@ footer p {
   100% {
     opacity: 1;
   }
+}
+
+.form-message {
+  height: 60%;
+  background-color: white;
+  color: #141414;
+}
+
+@media screen and (min-width: 40rem) {
+  .form-message {
+    height: 70%;
+  }
+}
+
+.form-message.error {
+  background-color: #303030;
+  color: white;
+}
+
+.form-message.error button {
+  background-color: #ec4141;
+}
+
+.form-message .icon {
+  height: 30%;
+  background-color: #d1e6df;
+  border-radius: 0 0 35% 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.form-message .message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-message h2, .form-message p {
+  margin: 0;
+}
+
+.form-message p {
+  margin-top: .75em;
+}
+
+.form-message button {
+  margin-top: 2.5rem;
+  padding: .75em 3.5em;
+  border-radius: 3px;
+  font-family: var(--medium-font);
+}
+
+@media screen and (min-width: 40rem) {
+  .form-message button {
+    margin-top: 3rem;
+  }
+}
+
+.icon.error {
+  background-color: #595959;
+}
+
+.icon img {
+  width: 7em;
 }
 
 html {
