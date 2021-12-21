@@ -29,7 +29,7 @@ const MessageForm = () => {
         const serviceID = process.env.REACT_APP_SERVICE_ID
         const userID = process.env.REACT_APP_USER_ID
         try{
-            const response = await emailjs.send( templateID, values, userID)
+            const response = await emailjs.send(serviceID, templateID, values, userID)
             switch(response.status)
             {
                 case 200: 
