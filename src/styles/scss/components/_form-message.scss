@@ -1,0 +1,63 @@
+.form-message{
+    height: 60%;
+    background-color: map-get($colors, primary-color);
+    color: map-get($colors, secondary-color);
+
+    @include media-quarie(medium){
+        height: 70%;
+    }
+
+    &.error{
+        background-color: hsl(286, 0%, 19%);
+        color: map-get($colors, primary-color);
+
+        button{
+            background-color: hsl(0, 82%, 59%);
+        }
+    }
+
+    .icon{
+        height: 30%;
+        background-color: hsl(160, 29%, 86%);
+        border-radius: 0 0 35% 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: px-to-rem(20px);
+    }
+
+    .message{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2, p{
+        margin: 0;
+    }
+
+    p{
+        margin-top: .75em;
+    }
+
+    button{
+        margin-top: 2.5rem;
+        padding: .75em 3.5em;
+        border-radius: 3px;
+        font-family: var(--medium-font);
+
+        @include media-quarie(medium){
+            margin-top: 3rem;
+        }
+    }
+}
+
+.icon{
+    &.error{
+        background-color: map-get($colors, tertiary-color);
+    }
+
+    img{
+        width: 7em;
+    }
+}
