@@ -47,7 +47,7 @@
     }
 
     a{
-        color: hsl(275, 100%, 43%);
+        color: map-get($colors, link-color);
     }
 }
 

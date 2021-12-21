@@ -2,8 +2,11 @@ import { Formik, Form, Field, ErrorMessage } from "formik"
 import checkImage from "../../img/cheque.png"
 import { useRef, useState } from "react"
 import emailjs from "emailjs-com"
+import Loader from "../../Loader/Loader"
 
 const MessageForm = () => {
+    const [ sendingMessage, setSendingMessage ] = useState(false)
+    const [ sendedMessage, setSendedMessage ] = useState(false)
     const [ errorMessage, setErrorMessage ] = useState(false)
     const formModal = useRef()
     const loaderModal = useRef()
@@ -34,7 +37,8 @@ const MessageForm = () => {
             switch(response.status)
             {
                 case 200: 
-                    showMessage()
+                    //showMessage()
+                    setSendedMessage(true)
                     break
                 default:
                     setErrorMessage(true)
@@ -56,7 +60,12 @@ const MessageForm = () => {
     return (
         <>
             <div className="modal" ref={formModal}>
-                <div className="content l-60 m-80 s-90" ref={messageModal}>
+                <div className="modal-content">
+                    {sendingMessage && 
+                        <Loader message="Escribiendo mensaje..."/>
+                    }
+                </div>
+                {/* <div className="content l-60 m-80 s-90" ref={messageModal}>
                     <div className="icon">
                         <img src={checkImage} alt="Imagen de validación"></img>
                     </div>
@@ -75,7 +84,7 @@ const MessageForm = () => {
                     <p className="message">
                         Enviando mensaje...
                     </p>
-                </div>
+                </div> */}
             </div>
             <Formik
                 initialValues={{
@@ -104,8 +113,9 @@ const MessageForm = () => {
                 onSubmit={(values, { resetForm }) => {
                     formModal.current.classList.toggle("active")
                     document.body.style.overflow = "hidden"
-                    sendEmail(values)
-                    resetForm()
+                    setSendingMessage(true)
+                    // sendEmail(values)
+                    // resetForm()
                 }}
             >
                 {({ values, errors, handleChange, handleBlur }) => (
@@ -142,12 +152,12 @@ const MessageForm = () => {
                             </ErrorMessage>
                         </div>
                         <input type="submit" value="Enviar" className="button"></input>
-                        {errorMessage && 
+                        {/* {errorMessage && 
                             <p className="center-content error">
                                 Ups... el mensaje no pudo ser enviado. <br></br>
                                 Por favor inténtelo de vuelta más tarde.
                             </p>
-                        }
+                        } */}
                     </Form>
                 )}
             </Formik>

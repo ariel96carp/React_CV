@@ -662,12 +662,12 @@ header .nav.show {
   padding: 1em .5em;
 }
 
-.education-container .carrer:nth-of-type(-n+6) {
+.education-container .carrer:nth-of-type(-n+7) {
   margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 40rem) {
-  .education-container .carrer:nth-of-type(-n+6) {
+  .education-container .carrer:nth-of-type(-n+7) {
     margin-bottom: 2rem;
   }
 }
@@ -684,6 +684,11 @@ header .nav.show {
   background-color: #141414;
   width: fit-content;
   padding: .5em;
+}
+
+.carrer .title-link {
+  text-decoration: underline;
+  color: #8000db;
 }
 
 .contact {
@@ -919,6 +924,22 @@ header .nav.show {
   color: #f02000;
 }
 
+footer {
+  background-color: black;
+  color: white;
+}
+
+footer p {
+  font-size: .8em;
+  padding: .5em 0;
+}
+
+@media screen and (min-width: 40rem) {
+  footer p {
+    padding: .75em 0;
+  }
+}
+
 .loader-content .loader {
   --size: 8rem;
   --border-size: 5px;
@@ -948,6 +969,7 @@ header .nav.show {
 .loader-content .message {
   font-size: 1.2em;
   animation: message 1s alternate infinite ease-in-out;
+  margin-bottom: 0;
 }
 
 @keyframes message {
@@ -956,22 +978,6 @@ header .nav.show {
   }
   100% {
     opacity: 1;
-  }
-}
-
-footer {
-  background-color: black;
-  color: white;
-}
-
-footer p {
-  font-size: .8em;
-  padding: .5em 0;
-}
-
-@media screen and (min-width: 40rem) {
-  footer p {
-    padding: .75em 0;
   }
 }
 

@@ -5,7 +5,7 @@
 }
 
 .education-container{
-    $carrers: 6; // CANTIDAD DE CURSOS REALIZADOS - 1
+    $carrers: 7; // CANTIDAD DE CURSOS REALIZADOS - 1
     background-color: map-get($colors, button-color);
     padding: 1em .5em;
 
@@ -29,5 +29,10 @@
         background-color: map-get($colors, secondary-color);
         width: fit-content;
         padding: .5em;
+    }
+
+    .title-link{
+        text-decoration: underline;
+        color: map-get($colors, link-color);
     }
 }
