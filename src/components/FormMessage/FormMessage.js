@@ -40,6 +40,24 @@ const FormMessage = ({ sendedMessage, closeFunction }) => {
                         }
                     </div>
                 </div>
+            )
+        default:
+            return (
+                <div className="form-message l-60 m-80 s-90">
+                    <div className="icon">
+                        <img src={checkImage} alt="Imagen de validación"></img>
+                    </div>
+                    <div className="message">
+                        <h2>¡Mensaje enviado!</h2>
+                        <p className="center-content">
+                            ¡Muchas gracias por tu interés! <br></br>
+                            A la brevedad estaré constestando.
+                        </p>
+                        {closeFunction && 
+                            <button onClick={closeFunction}>Cerrar</button>
+                        }
+                    </div>
+                </div>
             )            
     }
 }
