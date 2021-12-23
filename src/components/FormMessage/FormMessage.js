@@ -17,9 +17,7 @@ const FormMessage = ({ sendedMessage, closeFunction }) => {
                             ¡Muchas gracias por tu interés! <br></br>
                             A la brevedad estaré constestando.
                         </p>
-                        {closeFunction && 
-                            <button onClick={closeFunction}>Cerrar</button>
-                        }
+                        <button onClick={closeFunction}>Cerrar</button>
                     </div>
                 </div>
             )
@@ -35,9 +33,7 @@ const FormMessage = ({ sendedMessage, closeFunction }) => {
                             Ups... el mensaje no pudo ser enviado. <br></br>
                             Por favor inténtelo de vuelta más tarde.
                         </p>
-                        {closeFunction && 
-                            <button onClick={closeFunction}>Cerrar</button>
-                        }
+                        <button onClick={closeFunction}>Cerrar</button>
                     </div>
                 </div>
             )
@@ -53,9 +49,7 @@ const FormMessage = ({ sendedMessage, closeFunction }) => {
                             ¡Muchas gracias por tu interés! <br></br>
                             A la brevedad estaré constestando.
                         </p>
-                        {closeFunction && 
-                            <button onClick={closeFunction}>Cerrar</button>
-                        }
+                        <button onClick={closeFunction}>Cerrar</button>
                     </div>
                 </div>
             )            
