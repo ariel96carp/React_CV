@@ -34,8 +34,8 @@ const Education = () => {
     const toggleContainer = () => {
         rotateButton()
         addContainerPadding()
-        educationSection.current.classList.toggle("show")
         setDescriptionHeight()
+        educationSection.current.classList.toggle("show")
     }
     
     return (

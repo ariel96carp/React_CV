@@ -674,7 +674,7 @@ header .nav.show {
   margin-bottom: 0;
 }
 
-.flex-content .description {
+.description-container .description {
   margin-bottom: 0;
 }
 
@@ -697,6 +697,7 @@ header .nav.show {
 .education-container {
   background-color: #008bdb;
   padding: 1em .5em;
+  margin-top: 1em;
 }
 
 .education-container .carrer:nth-of-type(-n+7) {

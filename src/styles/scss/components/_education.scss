@@ -17,7 +17,9 @@
         transform: translateX(-50%);
         margin-bottom: 0;
     }
+}
 
+.description-container{
     .description{
         margin-bottom: 0;
     }
@@ -43,6 +45,7 @@
     $carrers: 7; // CANTIDAD DE CURSOS REALIZADOS - 1
     background-color: map-get($colors, button-color);
     padding: 1em .5em;
+    margin-top: 1em;
 
     .carrer:nth-of-type(-n+#{$carrers}){
         margin-bottom: 1rem;
