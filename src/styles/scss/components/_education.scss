@@ -6,12 +6,6 @@
     &.show{
         height: auto;
     }
-
-    &:not(.show){
-        .description{
-            margin-bottom: 0;
-        }
-    }
 }
 
 .flex-content{
@@ -21,6 +15,10 @@
     h2{
         margin-left: 50%;
         transform: translateX(-50%);
+        margin-bottom: 0;
+    }
+
+    .description{
         margin-bottom: 0;
     }
 }

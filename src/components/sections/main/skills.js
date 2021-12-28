@@ -22,7 +22,7 @@ const skillSection = () => {
                     <Skill tecnology="JavaScript" level="Intermedio" image={jsImage} />
                     <Skill tecnology="CSS" level="Intermedio" image={cssImage} />
                     <Skill tecnology="SASS" level="Intermedio" image={scssImage} />
-                    <Skill tecnology="React" level="Básico" image={reactImage} />
+                    <Skill tecnology="React" level="Intermedio" image={reactImage} />
                     <Skill tecnology="HTML5" level="Avanzado" image={htmlImage} />
                     <Skill tecnology="CSharp" level="Básico" image={csharpImage} />
                     <Skill tecnology="SQL" level="Básico" image={sqlImage} />
