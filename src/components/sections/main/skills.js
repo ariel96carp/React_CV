@@ -9,6 +9,7 @@ import sqlImage from "../../img/sql.png"
 import gitImage from "../../img/github.png"
 import cImage from "../../img/c-.png"
 import gScriptImage from "../../img/secuencia-de-comandos-de-aplicaciones-de-google.png"
+import reduxImage from "../../img/redux.png"
 
 const skillSection = () => {
     return (
@@ -23,6 +24,7 @@ const skillSection = () => {
                     <Skill tecnology="CSS" level="Intermedio" image={cssImage} />
                     <Skill tecnology="SASS" level="Intermedio" image={scssImage} />
                     <Skill tecnology="React" level="Intermedio" image={reactImage} />
+                    <Skill tecnology="Redux" level="Básico" image={reduxImage} />
                     <Skill tecnology="HTML5" level="Avanzado" image={htmlImage} />
                     <Skill tecnology="CSharp" level="Básico" image={csharpImage} />
                     <Skill tecnology="SQL" level="Básico" image={sqlImage} />

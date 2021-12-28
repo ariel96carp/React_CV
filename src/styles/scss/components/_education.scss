@@ -45,7 +45,7 @@
     $carrers: 7; // CANTIDAD DE CURSOS REALIZADOS - 1
     background-color: map-get($colors, button-color);
     padding: 1em .5em;
-    margin-top: 1em;
+    margin-top: 0.75rem;
 
     .carrer:nth-of-type(-n+#{$carrers}){
         margin-bottom: 1rem;
@@ -53,6 +53,10 @@
         @include media-quarie(medium){
             margin-bottom: 2rem;
         }
+    }
+
+    @include media-quarie(medium){
+        margin-top: 1rem;
     }
 }
 

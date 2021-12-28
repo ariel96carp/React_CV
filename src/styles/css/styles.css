@@ -697,7 +697,7 @@ header .nav.show {
 .education-container {
   background-color: #008bdb;
   padding: 1em .5em;
-  margin-top: 1em;
+  margin-top: 0.75rem;
 }
 
 .education-container .carrer:nth-of-type(-n+7) {
@@ -707,6 +707,12 @@ header .nav.show {
 @media screen and (min-width: 40rem) {
   .education-container .carrer:nth-of-type(-n+7) {
     margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  .education-container {
+    margin-top: 1rem;
   }
 }
 
