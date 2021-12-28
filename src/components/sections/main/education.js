@@ -1,10 +1,59 @@
 import Carrer from "../cards/Carrer"
+import arrowImage from "../../img/down-arrow.png"
+import { useRef, useEffect } from "react"
 
 const Education = () => {
+    const educationSection = useRef()
+    const descriptionContainer = useRef()
+    const containerButton = useRef()
+    useEffect(() => { 
+        setTimeout(() => {
+            setDescriptionHeight()
+        }, 100)
+        
+        window.addEventListener("resize", setDescriptionHeight)
+        return(() => {
+            window.removeEventListener("resize", setDescriptionHeight)
+        })
+    }, [])
+    
+    const setDescriptionHeight = () => {
+        const containerHeight = descriptionContainer.current.getBoundingClientRect().height.toFixed(2)
+        educationSection.current.style.setProperty("--initial-height", `${containerHeight}px`)
+    }
+
+    const addContainerPadding = () => {
+        descriptionContainer.current.classList.toggle("section-padding")
+        educationSection.current.classList.toggle("section-padding")
+    }
+    
+    const rotateButton = () => {
+        containerButton.current.classList.toggle("open")
+    }
+
+    const toggleContainer = () => {
+        rotateButton()
+        addContainerPadding()
+        educationSection.current.classList.toggle("show")
+        setDescriptionHeight()
+    }
+    
     return (
-        <section className="education section-padding" id="educationSection">
-            <h2 className="center-content">Formación</h2>
-            <p className="center-content">Educación y cursos realizados</p>
+        <section className="education" id="educationSection" ref={educationSection}>
+            <div className="description-container section-padding" ref={descriptionContainer}>
+                <div className="wrapper">
+                    <div className="flex-content m-60 s-80 center-block">
+                        <h2>Formación</h2>
+                        <div 
+                            className="container-button"
+                            ref={containerButton}
+                            onClick={toggleContainer}>
+                                <img src={arrowImage} alt="Imagen de flecha"></img>
+                        </div>
+                    </div>
+                    <p className="description center-content">Educación y cursos realizados</p>
+                </div>
+            </div>
             <div className="education-container">
                 <div className="wrapper l-60 m-80 center-block">
                     <Carrer

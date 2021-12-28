@@ -1,6 +1,43 @@
 .education{
+    --initial-height: 0;
+    height: var(--initial-height);
+    overflow: hidden;
+
+    &.show{
+        height: auto;
+    }
+
+    &:not(.show){
+        .description{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.flex-content{
+    display: flex;
+    align-items: center;
+
     h2{
+        margin-left: 50%;
+        transform: translateX(-50%);
         margin-bottom: 0;
+    }
+}
+
+.container-button{
+    margin-left: auto;
+    transition: transform .5s;
+    cursor: pointer;
+
+    img{
+        --size: 2em;
+        width: var(--size);
+        height: var(--size);
+    }
+
+    &.open{
+        transform: rotateX(180deg);
     }
 }
 
