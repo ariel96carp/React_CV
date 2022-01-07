@@ -653,47 +653,6 @@ header .nav.show {
   margin-top: 1em;
 }
 
-.education {
-  --initial-height: 0;
-  height: var(--initial-height);
-  overflow: hidden;
-}
-
-.education.show {
-  height: auto;
-}
-
-.flex-content {
-  display: flex;
-  align-items: center;
-}
-
-.flex-content h2 {
-  margin-left: 50%;
-  transform: translateX(-50%);
-  margin-bottom: 0;
-}
-
-.description-container .description {
-  margin-bottom: 0;
-}
-
-.container-button {
-  margin-left: auto;
-  transition: transform .5s;
-  cursor: pointer;
-}
-
-.container-button img {
-  --size: 2em;
-  width: var(--size);
-  height: var(--size);
-}
-
-.container-button.open {
-  transform: rotateX(180deg);
-}
-
 .education-container {
   background-color: #008bdb;
   padding: 1em .5em;
