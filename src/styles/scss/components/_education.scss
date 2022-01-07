@@ -1,53 +1,9 @@
-// .education{
-//     --initial-height: 0;
-//     height: var(--initial-height);
-//     overflow: hidden;
-
-//     &.show{
-//         height: auto;
-//     }
-// }
-
-// .flex-content{
-//     display: flex;
-//     align-items: center;
-
-//     h2{
-//         margin-left: 50%;
-//         transform: translateX(-50%);
-//         margin-bottom: 0;
-//     }
-// }
-
-// .description-container{
-//     .description{
-//         margin-bottom: 0;
-//     }
-// }
-
-// .container-button{
-//     margin-left: auto;
-//     transition: transform .5s;
-//     cursor: pointer;
-
-//     img{
-//         --size: 2em;
-//         width: var(--size);
-//         height: var(--size);
-//     }
-
-//     &.open{
-//         transform: rotateX(180deg);
-//     }
-// }
-
 .education-container{
-    $carrers: 7; // CANTIDAD DE CURSOS REALIZADOS - 1
     background-color: map-get($colors, button-color);
     padding: 1em .5em;
     margin-top: 0.75rem;
 
-    .carrer:nth-of-type(-n+#{$carrers}){
+    .carrer:not(:last-child){
         margin-bottom: 1rem;
 
         @include media-quarie(medium){
@@ -76,5 +32,61 @@
     .title-link{
         text-decoration: underline;
         color: map-get($colors, link-color);
+    }
+}
+
+.carrers-container{
+    .carrer:not(:first-child){
+        padding: .5em;
+        border-radius: 3px;
+        background-color: map-get($colors, quaternary-color);
+
+        .period{
+            background-color: map-get($colors, button-color);
+        }
+    }
+
+    &:not(:last-child){
+        margin-bottom: 1rem;
+
+        @include media-quarie(medium){
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.flex-carrer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+
+    h3{
+        margin-bottom: 0;
+    }
+}
+
+.carrers-container{
+    --initial-height: 0;
+    height: var(--initial-height);
+    overflow: hidden;
+
+    &.open{ 
+        height: auto;
+    }
+}
+
+.button-container{
+    cursor: pointer;
+    transition: transform .5s;
+    height: fit-content;
+
+    img{
+        --size: 2em;
+        width: var(--size);
+        height: var(--size);
+    }
+
+    &.toggle{
+        transform: rotateX(180deg);
     }
 }

@@ -1,51 +1,12 @@
 import Carrer from "../cards/Carrer"
-import arrowImage from "../../img/down-arrow.png"
-import { useEffect } from "react"
+import CarrerContainer from "../cards/CarrerContainer"
 
 const Education = () => {
-    // useEffect(() => { 
-    //     setTimeout(() => {
-    //         setDescriptionHeight()
-    //     }, 100)
-        
-    //     window.addEventListener("resize", setDescriptionHeight)
-    //     return(() => {
-    //         window.removeEventListener("resize", setDescriptionHeight)
-    //     })
-    // }, [])
-    
-    // const setDescriptionHeight = () => {
-    //     const containerHeight = descriptionContainer.current.getBoundingClientRect().height.toFixed(2)
-    //     educationSection.current.style.setProperty("--initial-height", `${containerHeight}px`)
-    // }
-
-    // const addContainerPadding = () => {
-    //     descriptionContainer.current.classList.toggle("section-padding")
-    //     educationSection.current.classList.toggle("section-padding")
-    // }
-    
-    // const rotateButton = () => {
-    //     containerButton.current.classList.toggle("open")
-    // }
-
-    // const toggleContainer = () => {
-    //     rotateButton()
-    //     addContainerPadding()
-    //     setDescriptionHeight()
-    //     educationSection.current.classList.toggle("show")
-    // }
-    
     return (
         <section className="education section-padding" id="educationSection">
             <div className="description-container">
                 <div className="wrapper">
                     <h2 className="center-content">Formación</h2>
-                    {/* <div 
-                        className="container-button"
-                        ref={containerButton}
-                        onClick={toggleContainer}>
-                            <img src={arrowImage} alt="Imagen de flecha"></img>
-                    </div> */}
                     <p className="description center-content">Educación y cursos realizados</p>
                 </div>
             </div>
@@ -66,18 +27,120 @@ const Education = () => {
                         institute="Instituto Cambridge de Cultura Inglesa"
                         time="Nivel B1"
                         period="2009-2013" />
-                    <Carrer
+                    <CarrerContainer
                         title="Frontend Desde Cero"
                         institute="EDteam (Plataforma de Educación Online)"
                         time="47 horas"
                         period="2021" 
-                        titleLink="https://ed.team/@dantecarrasco/speciality/frontend" />
-                    <Carrer
+                        titleLink="https://ed.team/@dantecarrasco/speciality/frontend" 
+                        carrersArray={[
+                            {
+                                title: "HTML Desde Cero",
+                                institute: "EDteam (Plataforma de Educación Online)",
+                                time: "6 horas",
+                                period: "2020", 
+                                titleLink: "https://ed.team/@dantecarrasco/curso/html"
+                            },
+                            {
+                                title: "CSS Desde Cero",
+                                institute: "EDteam (Plataforma de Educación Online)",
+                                time: "9 horas",
+                                period: "2020",
+                                titleLink: "https://ed.team/@dantecarrasco/curso/css"
+                            },
+                            {
+                                title: "JavaScript Desde Cero",
+                                institute: "EDteam (Plataforma de Educación Online)",
+                                time: "8 horas",
+                                period: "2020",
+                                titleLink: "https://ed.team/@dantecarrasco/curso/javascript"
+                            },
+                            {
+                                title: "JavaScript en el Navegador",
+                                institute: "EDteam (Plataforma de Educación Online)",
+                                time: "4 horas",
+                                period: "2021",
+                                titleLink: "https://ed.team/@dantecarrasco/curso/js-dom"
+                            },
+                            {
+                                title: "GIT Desde Cero",
+                                institute: "EDteam (Plataforma de Educación Online)",
+                                time: "5 horas",
+                                period: "2021",
+                                titleLink: "https://ed.team/@dantecarrasco/curso/git"
+                            },
+                            {
+                                title: "Flexbox y Grid",
+                                institute: "EDteam (Plataforma de Educación Online)",
+                                time: "5 horas",
+                                period: "2021",
+                                titleLink: "https://ed.team/@dantecarrasco/curso/flexbox-grid"
+                            },
+                            {
+                                title: "Variables CSS",
+                                institute: "EDteam (Plataforma de Educación Online)",
+                                time: "2 horas",
+                                period: "2021",
+                                titleLink: "https://ed.team/@dantecarrasco/curso/variables-css"
+                            },
+                            {
+                                title: "SASS Desde Cero",
+                                institute: "EDteam (Plataforma de Educación Online)",
+                                time: "4 horas",
+                                period: "2021",
+                                titleLink: "https://ed.team/@dantecarrasco/curso/sass"
+                            },
+                            {
+                                title: "Responsive Web Design",
+                                institute: "EDteam (Plataforma de Educación Online)",
+                                time: "5 horas",
+                                period: "2021",
+                                titleLink: "https://ed.team/@dantecarrasco/curso/rwd"
+                            }
+                        ]}/>
+                    <CarrerContainer
                         title="Desarrollo Web con JavaScript"
                         institute="EDteam (Plataforma de Educación Online)"
                         time="26 horas"
                         period="2021" 
-                        titleLink="https://ed.team/@dantecarrasco/speciality/javascript" />
+                        titleLink="https://ed.team/@dantecarrasco/speciality/javascript" 
+                        carrersArray={[
+                            {
+                                title: "JavaScript Desde Cero",
+                                institute: "EDteam (Plataforma de Educación Online)",
+                                time: "8 horas",
+                                period: "2020",
+                                titleLink: "https://ed.team/@dantecarrasco/curso/javascript"
+                            },
+                            {
+                                title: "JavaScript en el Navegador",
+                                institute: "EDteam (Plataforma de Educación Online)",
+                                time: "4 horas",
+                                period: "2021",
+                                titleLink: "https://ed.team/@dantecarrasco/curso/js-dom"
+                            },
+                            {   
+                                title: "Programación Orientada a Objetos con JavaScript",
+                                institute: "EDteam (Plataforma de Educación Online)",
+                                time: "4 horas",
+                                period: "2020",
+                                titleLink: "https://ed.team/@dantecarrasco/curso/js-poo"
+                            },
+                            {
+                                title: "Ajax y Websockets",
+                                institute: "EDteam (Plataforma de Educación Online)",
+                                time: "6 horas",
+                                period: "2021",
+                                titleLink: "https://ed.team/@dantecarrasco/curso/ajax-ws"
+                            },
+                            {
+                                title: "Single Page Aplication con JavaScript",
+                                institute: "EDteam (Plataforma de Educación Online)",
+                                time: "5 horas",
+                                period: "2021",
+                                titleLink: "https://ed.team/@dantecarrasco/curso/spa"
+                            }
+                        ]}/>
                     <Carrer
                         title="CSS Avanzado"
                         institute="EDteam (Plataforma de Educación Online)"
@@ -95,7 +158,7 @@ const Education = () => {
                         institute="EDteam (Plataforma de Educación Online)"
                         time="6 horas"
                         period="2021" 
-                        titleLink="https://ed.team/@dantecarrasco/curso/react-state" />    
+                        titleLink="https://ed.team/@dantecarrasco/curso/react-state" /> 
                 </div>
             </div>
         </section>
