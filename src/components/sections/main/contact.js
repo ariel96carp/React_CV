@@ -26,13 +26,13 @@ const Contact = () => {
                                 </div>
                             </div>
                             <div className="map-container">
-                                <iframe 
+                                {/* <iframe 
                                     title="Mi dirección" 
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.6274016726516!2d-58.53757248519131!3d-34.71457667087842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccf414a73e80b%3A0x28047d49fbda8bf1!2s1%C2%B0%20de%20Mayo%20de%201982%2C%20Cdad.%20Evita%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1638814932181!5m2!1ses-419!2sar" 
                                     style={{border: 0}} 
                                     allowFullScreen="" 
                                     loading="lazy">    
-                                </iframe>
+                                </iframe> */}
                             </div>
                         </div>
                         <div className="contact-box">

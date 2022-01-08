@@ -3,14 +3,6 @@
     padding: 1em .5em;
     margin-top: 0.75rem;
 
-    .carrer:not(:last-child){
-        margin-bottom: 1rem;
-
-        @include media-quarie(medium){
-            margin-bottom: 2rem;
-        }
-    }
-
     @include media-quarie(medium){
         margin-top: 1rem;
     }
@@ -45,14 +37,15 @@
             background-color: map-get($colors, button-color);
         }
     }
+}
 
-    &:not(:last-child){
-        margin-bottom: 1rem;
+.carrer:not(:last-child),
+.carrers-container:not(:last-child){
+    margin-bottom: 1rem;
 
         @include media-quarie(medium){
             margin-bottom: 2rem;
         }
-    }
 }
 
 .flex-carrer{

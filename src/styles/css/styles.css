@@ -659,16 +659,6 @@ header .nav.show {
   margin-top: 0.75rem;
 }
 
-.education-container .carrer:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-@media screen and (min-width: 40rem) {
-  .education-container .carrer:not(:last-child) {
-    margin-bottom: 2rem;
-  }
-}
-
 @media screen and (min-width: 40rem) {
   .education-container {
     margin-top: 1rem;
@@ -704,11 +694,13 @@ header .nav.show {
   background-color: #008bdb;
 }
 
+.carrer:not(:last-child),
 .carrers-container:not(:last-child) {
   margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 40rem) {
+  .carrer:not(:last-child),
   .carrers-container:not(:last-child) {
     margin-bottom: 2rem;
   }
