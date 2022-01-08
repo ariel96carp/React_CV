@@ -52,7 +52,7 @@
 }
 
 .map-container{
-    @include responsive-ratio(16, 9, iframe);
+    @include responsive-ratio(16, 9);
 }
 
 .detail{

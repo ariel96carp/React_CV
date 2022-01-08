@@ -5,13 +5,14 @@ import { useEffect, useRef } from "react"
 const CarrerContainer = ({ title, institute, time, period, titleLink, carrersArray }) => {
     const carrersContainer = useRef()
     useEffect(() => {
-        setTimeout(() => {
+        const setInitialHeight = setTimeout(() => {
             setElementHeight()
         }, 100)
 
         window.addEventListener("resize", setElementHeight)
         return (() => {
             window.removeEventListener("resize", setElementHeight)
+            clearTimeout(setInitialHeight)
         })
     }, [])
 
