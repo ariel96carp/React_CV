@@ -16,7 +16,7 @@ const Carrer = ({ title, institute, time, period, titleLink, container }) => {
             {
                 switch(true)
                 {
-                    case i == 0:
+                    case i === 0:
                         carrerElements[i].style.transition = 
                         `opacity .5s, transform .5s`
                         break
