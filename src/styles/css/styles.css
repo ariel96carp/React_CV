@@ -688,6 +688,13 @@ header .nav.show {
   padding: .5em;
   border-radius: 3px;
   background-color: #212121;
+  opacity: 0;
+  transform: translateX(-150%);
+}
+
+.carrers-container .carrer:not(:first-child).show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .carrers-container .carrer:not(:first-child) .period {

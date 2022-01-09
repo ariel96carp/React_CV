@@ -1,18 +1,47 @@
 import PropTypes from "prop-types"
 import arrowImage from "../../img/down-arrow.png"
-import { useRef } from "react"
+import { useRef, useEffect } from "react"
 
 const Carrer = ({ title, institute, time, period, titleLink, container }) => {
     const carrerButton = useRef()
+    const carrerContainer = useRef()
+    useEffect(() => {
+        if (container)
+        {
+            const containerElement = carrerContainer.current.parentElement
+            const carrerElements = containerElement.querySelectorAll(" .carrer:not(:first-child)")
+            const carrersArray = Array.from(carrerElements)
+            for (let i = 0; i < carrersArray.length; i++)
+            if (i == 0)
+            {
+                carrersArray[i].style.transition = 
+                `opacity .5s, transform .5s`
+            }
+            else
+            {
+                carrersArray[i].style.transition = 
+                `opacity .5s ${i / 4}s, transform .5s ${i / 4}s`
+            }
+        }
+    }, [])
 
+    const addCarrerClass = () => {
+        const containerElement = carrerContainer.current.parentElement
+        const carrerElements = containerElement.querySelectorAll(" .carrer:not(:first-child)")
+        for (let element of carrerElements)
+        {
+            element.classList.toggle("show")
+        }
+    }
     const toggleContainer = () => {
         carrerButton.current.classList.toggle("toggle")
         const containerElement = carrerButton.current.parentElement.parentElement.parentElement
         containerElement.classList.toggle("open")
+        addCarrerClass()
     }
 
     return (
-        <div className="carrer">
+        <div className="carrer" ref={carrerContainer}>
             {container
                 ? (
                     <div className="flex-carrer">

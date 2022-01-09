@@ -32,6 +32,13 @@
         padding: .5em;
         border-radius: 3px;
         background-color: map-get($colors, quaternary-color);
+        opacity: 0;
+        transform: translateX(-150%);
+
+        &.show{
+            opacity: 1;
+            transform: translateX(0);
+        }
 
         .period{
             background-color: map-get($colors, button-color);
