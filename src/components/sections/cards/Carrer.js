@@ -1,36 +1,34 @@
 import PropTypes from "prop-types"
 import arrowImage from "../../img/down-arrow.png"
-import { useRef, useEffect } from "react"
+import { useRef } from "react"
 
 const Carrer = ({ title, institute, time, period, titleLink, container }) => {
     const carrerButton = useRef()
     const carrerContainer = useRef()
-    useEffect(() => {
-        if (container)
-        {
-            const containerElement = carrerContainer.current.parentElement
-            const carrerElements = containerElement.querySelectorAll(" .carrer:not(:first-child)")
-            const carrersArray = Array.from(carrerElements)
-            for (let i = 0; i < carrersArray.length; i++)
-            if (i == 0)
-            {
-                carrersArray[i].style.transition = 
-                `opacity .5s, transform .5s`
-            }
-            else
-            {
-                carrersArray[i].style.transition = 
-                `opacity .5s ${i / 4}s, transform .5s ${i / 4}s`
-            }
-        }
-    }, [])
 
     const addCarrerClass = () => {
         const containerElement = carrerContainer.current.parentElement
         const carrerElements = containerElement.querySelectorAll(" .carrer:not(:first-child)")
-        for (let element of carrerElements)
+        for (let i = 0; i < carrerElements.length; i++)
         {
-            element.classList.toggle("show")
+            carrerElements[i].classList.toggle("show")
+            if (carrerElements[i].classList.contains("show"))
+            {
+                switch(true)
+                {
+                    case i == 0:
+                        carrerElements[i].style.transition = 
+                        `opacity .5s, transform .5s`
+                        break
+                    default:
+                        carrerElements[i].style.transition = 
+                        `opacity .5s ${i / 4}s, transform .5s ${i / 4}s`
+                }
+            }
+            else
+            {
+                carrerElements[i].style.transition = "none"
+            }
         }
     }
     const toggleContainer = () => {
