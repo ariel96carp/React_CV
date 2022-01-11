@@ -32,10 +32,10 @@ const Map = () => {
     }, [])
 
     const onMapLoad = useCallback(map => {
-        const bounds = new google.maps.LatLngBounds()
+        const bounds = new window.google.maps.LatLngBounds()
         coordinates.forEach(coordinate => {
             bounds.extend(
-                new google.maps.LatLng(
+                new window.google.maps.LatLng(
                     coordinate.lat,
                     coordinate.lng
                 )
