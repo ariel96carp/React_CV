@@ -31,7 +31,7 @@ const Map = () => {
         )
     }, [])
 
-    const onMapLoad = useCallback((map) => {
+    const onMapLoad = useCallback(map => {
         const bounds = new google.maps.LatLngBounds()
         coordinates.forEach(coordinate => {
             bounds.extend(
