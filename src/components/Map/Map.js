@@ -5,6 +5,7 @@ const Map = () => {
     const googleApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY
     const latCoordinate = -34.71437824101841
     const lngCoordinate = -58.535330158467374
+    const google = window.google
     const myCoordinates = {
         id: 1,
         lat: latCoordinate,
