@@ -1039,6 +1039,11 @@ footer p {
   width: 7em;
 }
 
+.google-info h3 {
+  color: #141414;
+  font-size: 1em;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-size);
