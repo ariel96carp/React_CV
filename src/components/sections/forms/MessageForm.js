@@ -51,7 +51,7 @@ const MessageForm = () => {
         <>
             <div className="modal" ref={formModal}>
                 {sendingMessage && 
-                    <Loader message="Escribiendo mensaje..."/>
+                    <Loader message="Enviando mensaje..."/>
                 }
                 {sendedMessage &&
                     <FormMessage 
