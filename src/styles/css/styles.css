@@ -574,6 +574,15 @@ header .nav.show {
   margin: 0;
 }
 
+.media-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.media-links img {
+  height: 3em;
+}
+
 .about-me {
   min-height: calc(100vh - var(--header-size));
 }
@@ -655,7 +664,7 @@ header .nav.show {
 
 .education-container {
   background-color: #008bdb;
-  padding: 1em .5em;
+  padding: 1em 0;
   margin-top: 0.75rem;
 }
 
@@ -790,12 +799,12 @@ header .nav.show {
   margin-top: 0;
 }
 
-.contact-box:nth-of-type(-n + 4) {
+.contact-box:nth-of-type(-n + 3) {
   margin-bottom: 1.5rem;
 }
 
 @media screen and (min-width: 40rem) {
-  .contact-box:nth-of-type(-n + 4) {
+  .contact-box:nth-of-type(-n + 3) {
     margin-bottom: 2.5rem;
   }
 }

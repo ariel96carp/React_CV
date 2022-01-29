@@ -11,7 +11,7 @@ const Education = () => {
                 </div>
             </div>
             <div className="education-container">
-                <div className="wrapper l-60 m-80 center-block">
+                <div className="wrapper l-60 m-80 s-90 center-block">
                     <Carrer
                         title="Bachillerato Nacional con Orientación en Informática"
                         institute="ESBA (Escuela Superior Brigadier Alvarado)"
