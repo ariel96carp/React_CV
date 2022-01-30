@@ -37,7 +37,10 @@ const Contact = () => {
     return (
         <section className="contact section-padding" id="contactSection" ref={contactSection}>
             <div className="whatsapp-link" ref={whatsappLink}>
-                <a href="https://wa.me/1568922029" target="_blank">
+                <a 
+                    href="https://wa.me/1568922029" 
+                    target="_blank"
+                    rel="noreferrer">
                     <img src={whatsappImage} alt="Logo de Whatsapp"></img>
                 </a>
             </div>
