@@ -1,9 +1,46 @@
 import MessageForm from "../forms/MessageForm"
 import Map from "../../Map/Map"
+import whatsappImage from "../../img/whatsapp.png"
+import { useRef, useEffect } from "react"
 
 const Contact = () => {
+    const contactSection = useRef()
+    const whatsappLink = useRef()
+    useEffect(() => {
+        const toggleWhatsappLink = () => {
+            const headerSizeString = getComputedStyle(document.documentElement).getPropertyValue("--header-size")
+            const headerSizeNumber = Number(headerSizeString.replace("rem", ""))
+            const contactOffsetTop = contactSection.current.offsetTop
+            const documentScrollTop = document.documentElement.scrollTop + (headerSizeNumber * 16)
+            if (documentScrollTop >= contactOffsetTop - 1)
+            {
+                if (!whatsappLink.current.classList.contains("show"))
+                {
+                    whatsappLink.current.classList.add("show")
+                }
+            }
+            else
+            {
+                if (whatsappLink.current.classList.contains("show"))
+                {
+                    whatsappLink.current.classList.remove("show")
+                }
+            }
+        }
+
+        window.addEventListener("scroll", toggleWhatsappLink)
+        return(() => {
+            window.removeEventListener("scroll", toggleWhatsappLink)
+        })
+    }, [])
+
     return (
-        <section className="contact section-padding" id="contactSection">
+        <section className="contact section-padding" id="contactSection" ref={contactSection}>
+            <div className="whatsapp-link" ref={whatsappLink}>
+                <a href="https://wa.me/1568922029" target="_blank">
+                    <img src={whatsappImage} alt="Logo de Whatsapp"></img>
+                </a>
+            </div>
             <div className="wrapper">
                 <h2 className="title center-content">Contactáme</h2>
                 <p className="description center-content">

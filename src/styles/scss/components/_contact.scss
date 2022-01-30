@@ -5,6 +5,37 @@
     .title{
         margin-bottom: 0;
     }
+
+}
+
+.whatsapp-link{
+    --size: 4.5em;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-color: limegreen;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    z-index: var(--z-fixed);
+    transform: scale(0);
+    transition: transform .5s;
+
+    a{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img{
+        width: 60%;
+    }
+
+    &.show{
+        transform: scale(1);
+    }
 }
 
 .contact-container{
