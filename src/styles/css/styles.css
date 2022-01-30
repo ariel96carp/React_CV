@@ -768,7 +768,7 @@ header .nav.show {
 }
 
 .whatsapp-link {
-  --size: 4.5em;
+  --size: 4em;
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
@@ -778,8 +778,8 @@ header .nav.show {
   bottom: 10px;
   cursor: pointer;
   z-index: var(--z-fixed);
-  transform: scale(0);
-  transition: transform .5s;
+  opacity: 0;
+  transition: opacity .5s;
 }
 
 .whatsapp-link a {
@@ -794,7 +794,7 @@ header .nav.show {
 }
 
 .whatsapp-link.show {
-  transform: scale(1);
+  opacity: 1;
 }
 
 .contact-container {
