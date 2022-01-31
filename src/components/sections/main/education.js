@@ -25,7 +25,7 @@ const Education = () => {
                     <Carrer
                         title="Certificate in Advanced English"
                         institute="Instituto Cambridge de Cultura Inglesa"
-                        time="Nivel B1"
+                        time="Nivel B2"
                         period="2009-2013" />
                     <CarrerContainer
                         title="Frontend Desde Cero"
