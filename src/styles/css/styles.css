@@ -1088,12 +1088,6 @@ html {
   scroll-padding-top: var(--header-size);
 }
 
-@media screen and (min-width: 40rem) {
-  html {
-    scroll-snap-type: y proximity;
-  }
-}
-
 section {
   scroll-snap-align: start;
 }
