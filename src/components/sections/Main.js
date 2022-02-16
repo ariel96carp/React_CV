@@ -1,8 +1,4 @@
-import Banner from "./main/banner"
-import AboutMe from "./main/about-me"
-import Skills from "./main/skills"
-import Education from "./main/education"
-import Contact from "./main/contact"
+import Home from "../pages/Home"
 import { Routes, Route } from "react-router"
 
 const Main = () => {
@@ -10,13 +6,7 @@ const Main = () => {
         <main>
             <Routes>
                 <Route path="/" element={
-                    <>
-                        <Banner />
-                        <AboutMe />
-                        <Skills />
-                        <Education />
-                        <Contact />
-                    </>
+                    <Home />
                 }>
                 </Route>
             </Routes>

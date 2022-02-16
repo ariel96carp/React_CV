@@ -1,6 +1,6 @@
-import MessageForm from "../forms/MessageForm"
-import Map from "../../Map/Map"
-import WhatsappLink from "../../Atoms/WhatsappLink"
+import MessageForm from "../organisms/MessageForm"
+import Map from "../Atoms/Map"
+import WhatsappLink from "../Atoms/WhatsappLink"
 import { useRef, useEffect } from "react"
 
 const Contact = () => {

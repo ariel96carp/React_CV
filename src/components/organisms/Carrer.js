@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import arrowImage from "../../img/down-arrow.png"
+import arrowImage from "../img/down-arrow.png"
 import { useRef } from "react"
 
 const Carrer = ({ title, institute, time, period, titleLink, container }) => {

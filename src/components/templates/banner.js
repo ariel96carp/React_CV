@@ -1,6 +1,6 @@
 import { HashLink } from "react-router-hash-link"
-import linkedinImage from "../../img/linkedin.png"
-import githubImage from "../../img/github1.png"
+import linkedinImage from "../img/linkedin.png"
+import githubImage from "../img/github1.png"
 
 const Banner = () => {
     return (

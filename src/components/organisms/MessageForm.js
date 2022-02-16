@@ -1,8 +1,8 @@
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import { useRef, useState } from "react"
 import emailjs from "emailjs-com"
-import Loader from "../../Loader/Loader"
-import FormMessage from "../../FormMessage/FormMessage"
+import FormMessage from "../Atoms/FormMessage"
+import Loader from "../Atoms/Loader"
 
 const MessageForm = () => {
     const [ sendingMessage, setSendingMessage ] = useState(false)

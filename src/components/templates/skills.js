@@ -1,17 +1,17 @@
-import Skill from "../cards/Skill"
-import jsImage from "../../img/js.png"
-import cssImage from "../../img/css-3.png"
-import scssImage from "../../img/sass.png"
-import reactImage from "../../img/physics.png"
-import htmlImage from "../../img/html-5.png"
-import csharpImage from "../../img/c-sharp.png"
-import sqlImage from "../../img/sql.png"
-import gitImage from "../../img/github.png"
-import cImage from "../../img/c-.png"
-import gScriptImage from "../../img/secuencia-de-comandos-de-aplicaciones-de-google.png"
-import reduxImage from "../../img/redux.png"
+import Skill from "../organisms/Skill"
+import jsImage from "../img/js.png"
+import cssImage from "../img/css-3.png"
+import scssImage from "../img/sass.png"
+import reactImage from "../img/physics.png"
+import htmlImage from "../img/html-5.png"
+import csharpImage from "../img/c-sharp.png"
+import sqlImage from "../img/sql.png"
+import gitImage from "../img/github.png"
+import cImage from "../img/c-.png"
+import gScriptImage from "../img/secuencia-de-comandos-de-aplicaciones-de-google.png"
+import reduxImage from "../img/redux.png"
 
-const skillSection = () => {
+const Skills = () => {
     return (
         <section className="skills section-padding" id="skillsSection">
             <div className="wrapper center-content">
@@ -37,4 +37,4 @@ const skillSection = () => {
     )
 }
 
-export default skillSection
+export default Skills

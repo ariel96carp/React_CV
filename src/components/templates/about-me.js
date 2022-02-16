@@ -1,5 +1,5 @@
-import image from "../../img/Shoes-feet-street_m.jpg"
-import cv from "../../../cv/Desarrollador_Web_Front-End_JrTrainee_compressed.pdf"
+import image from "../img/Shoes-feet-street_m.jpg"
+import cv from "../../cv/Desarrollador_Web_Front-End_JrTrainee_compressed.pdf"
 
 const AboutMe = () => {
     return (

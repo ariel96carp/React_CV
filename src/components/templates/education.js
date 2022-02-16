@@ -1,5 +1,5 @@
-import Carrer from "../cards/Carrer"
-import CarrerContainer from "../cards/CarrerContainer"
+import Carrer from "../organisms/Carrer"
+import CarrerContainer from "../organisms/CarrerContainer"
 
 const Education = () => {
     return (
