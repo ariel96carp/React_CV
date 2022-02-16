@@ -780,6 +780,7 @@ header .nav.show {
   z-index: var(--z-fixed);
   opacity: 0;
   transition: opacity .5s;
+  pointer-events: none;
 }
 
 .whatsapp-link a {
@@ -795,6 +796,7 @@ header .nav.show {
 
 .whatsapp-link.show {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .contact-container {
