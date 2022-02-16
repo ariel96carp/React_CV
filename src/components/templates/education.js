@@ -141,24 +141,41 @@ const Education = () => {
                                 titleLink: "https://ed.team/@dantecarrasco/curso/spa"
                             }
                         ]}/>
+                    <CarrerContainer
+                        title="Desarrollo Frontend con React JS"
+                        institute="EDteam (Plataforma de Educación Online)"
+                        time="21 horas"
+                        period="2022"
+                        titleLink="https://ed.team/@dantecarrasco/speciality/react"
+                        carrersArray={[
+                            {
+                                title:"React Desde Cero",
+                                institute:"EDteam (Plataforma de Educación Online)",
+                                time:"8 horas",
+                                period:"2021",
+                                titleLink:"https://ed.team/@dantecarrasco/curso/reactjs"
+                            },
+                            {
+                                title:"React - Manejo del Estado de la Aplicación",
+                                institute:"EDteam (Plataforma de Educación Online)",
+                                time:"6 horas",
+                                period:"2021", 
+                                titleLink:"https://ed.team/@dantecarrasco/curso/react-state"
+                            },
+                            {
+                                title:"Plataforma de Educación Online con React JS",
+                                institute:"EDteam (Plataforma de Educación Online)",
+                                time:"8 horas",
+                                period:"2022",
+                                titleLink:"https://ed.team/@dantecarrasco/curso/workshop-react"
+                            }
+                        ]}/>
                     <Carrer
                         title="CSS Avanzado"
                         institute="EDteam (Plataforma de Educación Online)"
                         time="14 horas"
                         period="2021" 
                         titleLink="https://ed.team/@dantecarrasco/curso/css-avanzado" />
-                    <Carrer
-                        title="React Desde Cero"
-                        institute="EDteam (Plataforma de Educación Online)"
-                        time="8 horas"
-                        period="2021" 
-                        titleLink="https://ed.team/@dantecarrasco/curso/reactjs" />
-                    <Carrer
-                        title="React - Manejo del Estado de la Aplicación"
-                        institute="EDteam (Plataforma de Educación Online)"
-                        time="6 horas"
-                        period="2021" 
-                        titleLink="https://ed.team/@dantecarrasco/curso/react-state" /> 
                 </div>
             </div>
         </section>
