@@ -1,18 +1,24 @@
 import { HashLink } from "react-router-hash-link"
 import linkedinImage from "../img/linkedin.png"
 import githubImage from "../img/github1.png"
+import argentinianFlag from "../img/argentina.png"
+import americanFlag from "../img/estados-unidos-de-america.png"
 
 const Banner = () => {
     return (
         <div className="main-banner" id="bannerSection">
             <div className="wrapper">
+                <div className="lenguages">
+                    <img src={argentinianFlag} alt="Bandera de Argentina"></img>
+                    <img src={americanFlag} alt="Bandera de Estados Unidos"></img>
+                </div>
                 <div className="content">
                     <h2>Hola, soy <br></br>
                         <span className="name">Dante Carrasco.</span> 
                     </h2>
                     <p className="description">Soy un Desarrollador Web Front-End.</p>
+                    <HashLink to="/#aboutSection" className="button">Sobre mí</HashLink>
                 </div>
-                <HashLink to="/#aboutSection" className="button">Sobre mí</HashLink>
                 <ul className="media-links">
                     <li className="media-item">
                         <a 
