@@ -1,17 +1,27 @@
 import { HashLink } from "react-router-hash-link"
 import { FormattedMessage } from "react-intl"
+import { connect } from "react-redux"
 import linkedinImage from "../img/linkedin.png"
 import githubImage from "../img/github1.png"
 import argentinianFlag from "../img/argentina.png"
 import americanFlag from "../img/estados-unidos-de-america.png"
+import { changeToSpanish, changeToEnglish } from "../redux/actionscreator"
 
-const Banner = () => {
+const Banner = ({ addSpanish, addEnglish }) => {
     return (
         <div className="main-banner" id="bannerSection">
             <div className="wrapper">
                 <div className="lenguages">
-                    <img src={argentinianFlag} alt="Bandera de Argentina"></img>
-                    <img src={americanFlag} alt="Bandera de Estados Unidos"></img>
+                    <img 
+                        src={argentinianFlag} 
+                        alt="Bandera de Argentina"
+                        onClick={addSpanish}
+                    />
+                    <img 
+                        src={americanFlag} 
+                        alt="Bandera de Estados Unidos"
+                        onClick={addEnglish}
+                    />
                 </div>
                 <div className="content">
                     <h2>
@@ -53,4 +63,13 @@ const Banner = () => {
     )
 }
 
-export default Banner
+const mapDispatchToProps = dispatch => ({
+    addSpanish(){
+        dispatch(changeToSpanish())
+    },
+    addEnglish(){
+        dispatch(changeToEnglish())
+    }
+})
+
+export default connect(null, mapDispatchToProps)(Banner)
