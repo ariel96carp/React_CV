@@ -1,179 +1,192 @@
 import Carrer from "../organisms/Carrer"
 import CarrerContainer from "../organisms/CarrerContainer"
+import { FormattedMessage, useIntl } from "react-intl"
 
 const Education = () => {
+    const intl = useIntl()
+    const edteam = intl.formatMessage({ id: "carrer.place-edteam" })
+    const time = intl.formatMessage({ id: "carrer.time" })
+    const period = intl.formatMessage({ id: "carrer.period" })
+    const level = intl.formatMessage({ id: "carrer.level" })
+
     return (
         <section className="education section-padding" id="educationSection">
             <div className="description-container">
                 <div className="wrapper">
-                    <h2 className="center-content">Formación</h2>
-                    <p className="description center-content">Educación y cursos realizados</p>
+                    <h2 className="center-content">
+                        <FormattedMessage
+                            id="education.title"
+                        /></h2>
+                    <p className="description center-content">
+                        <FormattedMessage
+                            id="education.description"
+                        /></p>
                 </div>
             </div>
             <div className="education-container">
                 <div className="wrapper l-60 m-80 s-90 center-block">
                     <Carrer
                         title="Bachillerato Nacional con Orientación en Informática"
-                        institute="ESBA (Escuela Superior Brigadier Alvarado)"
-                        time="Secundario"
+                        institute={intl.formatMessage({ id: "carrer.institute-esba" })}
+                        time={intl.formatMessage({ id: "carrer.study-highschool" })}
                         period="2009-2013" />
                     <Carrer
                         title="Tecnicatura Superior en Análisis, Desarrollo y Programación de Aplicaciones"
-                        institute="Instituto Nº46 `2 de Abril de 1982`"
-                        time="Terciario"
-                        period="2017-Actualmente" />
+                        institute={intl.formatMessage({ id: "carrer.institute-college" })}
+                        time={ intl.formatMessage({ id: "carrer.study-communitycollege" })}
+                        period={`2017-${period}`} />
                     <Carrer
                         title="Certificate in Advanced English"
-                        institute="Instituto Cambridge de Cultura Inglesa"
-                        time="Nivel B2"
+                        institute={intl.formatMessage({ id: "carrer.institute-cambridge" })}
+                        time={`${level} B2`}
                         period="2009-2013" />
                     <CarrerContainer
-                        title="Frontend Desde Cero"
-                        institute="EDteam (Plataforma de Educación Online)"
-                        time="47 horas"
+                        title={intl.formatMessage({ id:"carrer.title-frontendFromScratch" })}
+                        institute={edteam}
+                        time={`47 ${time}`}
                         period="2021" 
                         titleLink="https://ed.team/@dantecarrasco/speciality/frontend" 
                         carrersArray={[
                             {
-                                title: "HTML Desde Cero",
-                                institute: "EDteam (Plataforma de Educación Online)",
-                                time: "6 horas",
+                                institute: edteam,
+                                title: intl.formatMessage({ id: "carrer.title-htmlFromScratch" }),
+                                time: `6 ${time}`,
                                 period: "2020", 
                                 titleLink: "https://ed.team/@dantecarrasco/curso/html"
                             },
                             {
-                                title: "CSS Desde Cero",
-                                institute: "EDteam (Plataforma de Educación Online)",
-                                time: "9 horas",
+                                title: intl.formatMessage({ id: "carrer.title-cssFromScratch" }),
+                                institute: edteam,
+                                time: `9 ${time}`,
                                 period: "2020",
                                 titleLink: "https://ed.team/@dantecarrasco/curso/css"
                             },
                             {
-                                title: "JavaScript Desde Cero",
-                                institute: "EDteam (Plataforma de Educación Online)",
-                                time: "8 horas",
+                                title: intl.formatMessage({ id: "carrer.title-jsFromScratch" }),
+                                institute: edteam,
+                                time: `8 ${time}`,
                                 period: "2020",
                                 titleLink: "https://ed.team/@dantecarrasco/curso/javascript"
                             },
                             {
-                                title: "JavaScript en el Navegador",
-                                institute: "EDteam (Plataforma de Educación Online)",
-                                time: "4 horas",
+                                title: intl.formatMessage({ id: "carrer.title-jsInBrowser" }),
+                                institute: edteam,
+                                time: `4 ${time}`,
                                 period: "2021",
                                 titleLink: "https://ed.team/@dantecarrasco/curso/js-dom"
                             },
                             {
-                                title: "GIT Desde Cero",
-                                institute: "EDteam (Plataforma de Educación Online)",
-                                time: "5 horas",
+                                title: intl.formatMessage({ id: "carrer.title-gitFromScratch" }),
+                                institute: edteam,
+                                time:`5 ${time}`,
                                 period: "2021",
                                 titleLink: "https://ed.team/@dantecarrasco/curso/git"
                             },
                             {
-                                title: "Flexbox y Grid",
-                                institute: "EDteam (Plataforma de Educación Online)",
-                                time: "5 horas",
+                                title: intl.formatMessage({ id: "carrer.title-flexboxAndGrid" }),
+                                institute: edteam,
+                                time: `5 ${time}`,
                                 period: "2021",
                                 titleLink: "https://ed.team/@dantecarrasco/curso/flexbox-grid"
                             },
                             {
-                                title: "Variables CSS",
-                                institute: "EDteam (Plataforma de Educación Online)",
-                                time: "2 horas",
+                                title: intl.formatMessage({ id: "carrer.title-cssVariables" }),
+                                institute: edteam,
+                                time: `2 ${time}`,
                                 period: "2021",
                                 titleLink: "https://ed.team/@dantecarrasco/curso/variables-css"
                             },
                             {
-                                title: "SASS Desde Cero",
-                                institute: "EDteam (Plataforma de Educación Online)",
-                                time: "4 horas",
+                                title: intl.formatMessage({ id: "carrer.title-sassFromScratch" }),
+                                institute: edteam,
+                                time: `4 ${time}`,
                                 period: "2021",
                                 titleLink: "https://ed.team/@dantecarrasco/curso/sass"
                             },
                             {
                                 title: "Responsive Web Design",
-                                institute: "EDteam (Plataforma de Educación Online)",
-                                time: "5 horas",
+                                institute: edteam,
+                                time: `5 ${time}`,
                                 period: "2021",
                                 titleLink: "https://ed.team/@dantecarrasco/curso/rwd"
                             }
                         ]}/>
                     <CarrerContainer
-                        title="Desarrollo Web con JavaScript"
-                        institute="EDteam (Plataforma de Educación Online)"
-                        time="26 horas"
+                        title={intl.formatMessage({ id: "carrer.title-webDevelopmentWithJavascript" })}
+                        institute={edteam}
+                        time={`26 ${time}`}
                         period="2021" 
                         titleLink="https://ed.team/@dantecarrasco/speciality/javascript" 
                         carrersArray={[
                             {
-                                title: "JavaScript Desde Cero",
-                                institute: "EDteam (Plataforma de Educación Online)",
-                                time: "8 horas",
+                                title: intl.formatMessage({ id: "carrer.title-jsFromScratch" }),
+                                institute: edteam,
+                                time: `8 ${time}`,
                                 period: "2020",
                                 titleLink: "https://ed.team/@dantecarrasco/curso/javascript"
                             },
                             {
-                                title: "JavaScript en el Navegador",
-                                institute: "EDteam (Plataforma de Educación Online)",
-                                time: "4 horas",
+                                title: intl.formatMessage({ id: "carrer.title-jsInBrowser" }),
+                                institute: edteam,
+                                time: `4 ${time}`,
                                 period: "2021",
                                 titleLink: "https://ed.team/@dantecarrasco/curso/js-dom"
                             },
                             {   
-                                title: "Programación Orientada a Objetos con JavaScript",
-                                institute: "EDteam (Plataforma de Educación Online)",
-                                time: "4 horas",
+                                title: intl.formatMessage({ id: "carrer.title-oopWithJavascript" }),
+                                institute: edteam,
+                                time: `4 ${time}`,
                                 period: "2020",
                                 titleLink: "https://ed.team/@dantecarrasco/curso/js-poo"
                             },
                             {
-                                title: "Ajax y Websockets",
-                                institute: "EDteam (Plataforma de Educación Online)",
-                                time: "6 horas",
+                                title: intl.formatMessage({ id: "carrer.title-ajaxAndWebsocket" }),
+                                institute: edteam,
+                                time: `6 ${time}`,
                                 period: "2021",
                                 titleLink: "https://ed.team/@dantecarrasco/curso/ajax-ws"
                             },
                             {
-                                title: "Single Page Aplication con JavaScript",
-                                institute: "EDteam (Plataforma de Educación Online)",
-                                time: "5 horas",
+                                title: intl.formatMessage({ id: "carrer.title-spaWithJavascript" }),
+                                institute: edteam,
+                                time: `5 ${time}`,
                                 period: "2021",
                                 titleLink: "https://ed.team/@dantecarrasco/curso/spa"
                             }
                         ]}/>
                     <CarrerContainer
-                        title="Desarrollo Frontend con React JS"
-                        institute="EDteam (Plataforma de Educación Online)"
-                        time="21 horas"
+                        title={intl.formatMessage({ id: "carrer.title-frontendDevelopmentWithReact" })}
+                        institute={edteam}
+                        time={`21 ${time}`}
                         period="2022"
                         titleLink="https://ed.team/@dantecarrasco/speciality/react"
                         carrersArray={[
                             {
-                                title:"React Desde Cero",
-                                institute:"EDteam (Plataforma de Educación Online)",
-                                time:"8 horas",
-                                period:"2021",
-                                titleLink:"https://ed.team/@dantecarrasco/curso/reactjs"
+                                title: intl.formatMessage({ id: "carrer.title-reactFromScratch" }),
+                                institute: edteam,
+                                time: `8 ${time}`,
+                                period: "2021",
+                                titleLink: "https://ed.team/@dantecarrasco/curso/reactjs"
                             },
                             {
-                                title:"React - Manejo del Estado de la Aplicación",
-                                institute:"EDteam (Plataforma de Educación Online)",
-                                time:"6 horas",
-                                period:"2021", 
-                                titleLink:"https://ed.team/@dantecarrasco/curso/react-state"
+                                title: intl.formatMessage({ id: "carrer.title-reactState" }),
+                                institute: edteam,
+                                time: `6 ${time}`,
+                                period: "2021", 
+                                titleLink: "https://ed.team/@dantecarrasco/curso/react-state"
                             },
                             {
-                                title:"Plataforma de Educación Online con React JS",
-                                institute:"EDteam (Plataforma de Educación Online)",
-                                time:"8 horas",
-                                period:"2022",
-                                titleLink:"https://ed.team/@dantecarrasco/curso/workshop-react"
+                                title: intl.formatMessage({ id: "carrer.title-reactEducationPlatform" }),
+                                institute: edteam,
+                                time: `8 ${time}`,
+                                period: "2022",
+                                titleLink: "https://ed.team/@dantecarrasco/curso/workshop-react"
                             }
                         ]}/>
                     <Carrer
-                        title="CSS Avanzado"
-                        institute="EDteam (Plataforma de Educación Online)"
-                        time="14 horas"
+                        title={intl.formatMessage({ id: "carrer.title-advancedCSS" })}
+                        institute={edteam}
+                        time={`14 ${time}`}
                         period="2021" 
                         titleLink="https://ed.team/@dantecarrasco/curso/css-avanzado" />
                 </div>

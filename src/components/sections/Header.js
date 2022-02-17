@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react"
 import { HashLink } from "react-router-hash-link"
+import { FormattedMessage } from "react-intl"
 
 const Header = () => {
     const navMenu = useRef()
@@ -89,19 +90,54 @@ const Header = () => {
                 <nav className="nav" ref={navMenu}>
                     <ul className="menu">
                         <li className="item center-content">
-                            <HashLink to="/#bannerSection" className="item" onClick={hideMenuFromItem}>Inicio</HashLink>
+                            <HashLink 
+                                to="/#bannerSection" 
+                                className="item" 
+                                onClick={hideMenuFromItem}>
+                                    <FormattedMessage
+                                        id="header.home"
+                                    />
+                            </HashLink>
                         </li>
                         <li className="item center-content">
-                            <HashLink to="/#aboutSection" className="item" onClick={hideMenuFromItem}>Sobre mí</HashLink>
+                            <HashLink 
+                                to="/#aboutSection" 
+                                className="item" 
+                                onClick={hideMenuFromItem}>
+                                    <FormattedMessage
+                                        id="header.about"
+                                    />
+                                </HashLink>
                         </li>
                         <li className="item center-content">
-                            <HashLink to="/#skillsSection" className="item" onClick={hideMenuFromItem}>Habilidades</HashLink>
+                            <HashLink 
+                                to="/#skillsSection" 
+                                className="item" 
+                                onClick={hideMenuFromItem}>
+                                <FormattedMessage
+                                    id="header.skills"
+                                />
+                            </HashLink>
                         </li>
                         <li className="item center-content">
-                            <HashLink to="/#educationSection" className="item" onClick={hideMenuFromItem}>Formación</HashLink>
+                            <HashLink 
+                                to="/#educationSection" 
+                                className="item" 
+                                onClick={hideMenuFromItem}>
+                                <FormattedMessage
+                                    id="header.education"
+                                />
+                            </HashLink>
                         </li>
                         <li className="item center-content">
-                            <HashLink to="/#contactSection" className="item" onClick={hideMenuFromItem}>Contacto</HashLink>
+                            <HashLink 
+                                to="/#contactSection" 
+                                className="item" 
+                                onClick={hideMenuFromItem}>
+                                <FormattedMessage
+                                    id="header.contact"
+                                />
+                            </HashLink>
                         </li>
                     </ul>
                 </nav>

@@ -2,6 +2,7 @@ import MessageForm from "../organisms/MessageForm"
 import Map from "../Atoms/Map"
 import WhatsappLink from "../Atoms/WhatsappLink"
 import { useRef, useEffect } from "react"
+import { FormattedMessage } from "react-intl"
 
 const Contact = () => {
     const contactSection = useRef()
@@ -38,19 +39,33 @@ const Contact = () => {
         <section className="contact section-padding" id="contactSection" ref={contactSection}>
             <WhatsappLink ref={whatsappRef} />
             <div className="wrapper">
-                <h2 className="title center-content">Contactáme</h2>
+                <h2 className="title center-content">
+                    <FormattedMessage
+                        id="contact.title"
+
+                    />
+                </h2>
                 <p className="description center-content">
-                    En caso de querer contactarme,
-                    podés acceder a la siguiente información:
+                    <FormattedMessage
+                        id="contact.description"
+                    />
                 </p>
                 <div className="contact-container">
                     <div className="contact-info">
-                        <h2>Información de Contacto</h2>
+                        <h2>
+                            <FormattedMessage
+                                id="contact.info"
+                            />
+                        </h2>
                         <div className="contact-box">
                             <div className="detail">
                                 <div className="detail-image"></div>
                                 <div className="description">
-                                    <h3 className="type">Dirección</h3>
+                                    <h3 className="type">
+                                        <FormattedMessage
+                                            id="contact.address"
+                                        />
+                                    </h3>
                                     <p className="info">
                                         Ciudad Evita, <br></br>
                                         1º de Mayo de 1982, <br></br>
@@ -67,7 +82,11 @@ const Contact = () => {
                             <div className="detail">
                                 <div className="detail-image"></div>
                                 <div className="description">
-                                    <h3 className="type">Teléfono</h3>
+                                    <h3 className="type">
+                                        <FormattedMessage
+                                            id="contact.phone"
+                                        />
+                                    </h3>
                                     <p className="info">1168922029</p>
                                 </div>
                             </div>
@@ -76,13 +95,21 @@ const Contact = () => {
                             <div className="detail">
                                 <div className="detail-image"></div>
                                 <div className="description">
-                                    <h3 className="type">Email</h3>
+                                    <h3 className="type">
+                                        <FormattedMessage
+                                            id="contact.email"
+                                        />
+                                    </h3>
                                     <p className="info">arielcarp1996@gmail.com</p>
                                 </div>
                             </div>
                         </div>
                         <div className="contact-box">
-                            <h3 className="type">Este repositorio</h3>
+                            <h3 className="type">
+                                <FormattedMessage
+                                    id="contact.repository"
+                                />
+                            </h3>
                             <a 
                                 href="https://github.com/ariel96carp/React_CV" 
                                 target="_blank"
@@ -91,7 +118,11 @@ const Contact = () => {
                         </div>
                     </div>
                     <div className="contact-form">
-                        <h2>Escribime</h2>
+                        <h2>
+                            <FormattedMessage
+                                id="contact.message"
+                            />
+                        </h2>
                         <MessageForm />
                     </div>
                 </div>

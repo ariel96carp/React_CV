@@ -1,5 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import { useRef, useState } from "react"
+import { useIntl } from "react-intl"
 import emailjs from "emailjs-com"
 import FormMessage from "../Atoms/FormMessage"
 import Loader from "../Atoms/Loader"
@@ -9,6 +10,7 @@ const MessageForm = () => {
     const [ sendedMessage, setSendedMessage ] = useState(false)
     const [ errorMessage, setErrorMessage ] = useState(false)
     const formModal = useRef()
+    const intl = useIntl()
     
     const closeMessage = (sendedMessage) => {
         formModal.current.classList.toggle("active")
@@ -51,7 +53,9 @@ const MessageForm = () => {
         <>
             <div className="modal" ref={formModal}>
                 {sendingMessage && 
-                    <Loader message="Enviando mensaje..."/>
+                    <Loader message={intl.formatMessage({
+                        id: "loader.message"
+                    })}/>
                 }
                 {sendedMessage &&
                     <FormMessage 
@@ -77,15 +81,21 @@ const MessageForm = () => {
 
                     if (!values.name)
                     {
-                        errors.name = "Debe ingresar un nombre."
+                        errors.name = intl.formatMessage({
+                            id: "message.error.name"
+                        })
                     }
                     if (!values.email)
                     {
-                        errors.email = "Debe ingresar un correo."
+                        errors.email = intl.formatMessage({
+                            id: "message.error.email"
+                        })
                     }
                     if (!values.message)
                     {
-                        errors.message = "Debe ingresar un mensaje."
+                        errors.message = intl.formatMessage({
+                            id: "message.error.message"
+                        })
                     }
 
                     return errors
@@ -105,14 +115,28 @@ const MessageForm = () => {
                         autoComplete="off" 
                     >
                         <div className="input">
-                            <Field type="text" name="name" placeholder="Nombre"></Field>
+                            <Field 
+                                type="text" 
+                                name="name" 
+                                placeholder=
+                                    {intl.formatMessage({
+                                        id: "message.placeholder.name"
+                                    })}
+                            />
                             <ErrorMessage name="name" component={() => (
                                 <p className="input-message error">{errors.name}</p>
                             )}>
                             </ErrorMessage>
                         </div>
                         <div className="input">
-                            <Field type="email" name="email" placeholder="Email"></Field>
+                            <Field 
+                                type="email" 
+                                name="email" 
+                                placeholder=
+                                    {intl.formatMessage({
+                                        id: "message.placeholder.email"
+                                    })}
+                            />
                             <ErrorMessage name="email" component={() => (
                                 <p className="input-message error">{errors.email}</p>
                             )}>
@@ -121,17 +145,27 @@ const MessageForm = () => {
                         <div className="input">
                             <textarea 
                                 name="message" 
-                                placeholder="Tu mensaje"
+                                placeholder=
+                                    {intl.formatMessage({
+                                        id: "message.placeholder.message"
+                                    })}
                                 value={values.message}
                                 onChange={handleChange}
-                                onBlur={handleBlur}>
-                            </textarea>
+                                onBlur={handleBlur}
+                            />
                             <ErrorMessage name="message" component={() => (
                                 <p className="input-message error">{errors.message}</p>
                             )}>
                             </ErrorMessage>
                         </div>
-                        <input type="submit" value="Enviar" className="button"></input>
+                        <input 
+                            type="submit" 
+                            value=
+                                {intl.formatMessage(
+                                    {id: "message.button"}
+                                )} 
+                            className="button"
+                        />
                     </Form>
                 )}
             </Formik>

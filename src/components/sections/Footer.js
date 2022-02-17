@@ -1,8 +1,14 @@
+import { FormattedMessage } from "react-intl"
+
 const Footer = () => {
     return (
         <footer>
             <div className="wrapper">
-                <p className="center-content">Copyright © 2021. Todos los derechos reservados.</p>
+                <p className="center-content">
+                    <FormattedMessage
+                        id="footer.content"
+                    />
+                </p>
             </div>
         </footer>
     )

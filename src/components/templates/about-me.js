@@ -1,30 +1,40 @@
 import image from "../img/Shoes-feet-street_m.jpg"
 import cv from "../../cv/Desarrollador_Web_Front-End_JrTrainee_compressed.pdf"
+import { FormattedMessage } from "react-intl"
 
 const AboutMe = () => {
     return (
         <section className="about-me wrapper section-padding" id="aboutSection">
-            <h2 className="center-content title">Sobre mí</h2>
+            <h2 className="center-content title">
+                <FormattedMessage
+                    id="about.title"
+                /></h2>
             <div className="section-grid">
                 <div className="description">
-                    <h3 className="title">Soy un Desarrollador Web Front-End.</h3>
+                    <h3 className="title">
+                        <FormattedMessage
+                            id="about.content.title"
+                        /></h3>
                     <p>
-                        ¡Hola! Soy un desarrollador web trainee con una fuerte base en HTML, CSS y JS.
-                        Más allá de contar con estudios formales, tanto a nivel secundario como
-                        terciario, relacionados a la computación; me gusta capacitarme todo el
-                        tiempo, realizando cursos en plataformas online como Platzi o EDteam.
+                        <FormattedMessage
+                            id="about.content.first"
+                        />
                     </p>
                     <p>
-                        Si bien actualmente cuento con un perfil muy orientado al frontend.
-                        Mi deseo es, cuando me considere lo suficientemente capacitado en el manejo 
-                        de React, comenzar a educarme en tecnologías pertenecientes al back; tales 
-                        como Phyton o NodeJS.                
+                        <FormattedMessage
+                            id="about.content.second"
+                        />              
                     </p>
                     <p>
-                        Además del conocimiento de tecnologías relacionadas al desarrollo web, cuento
-                        con nociones de C#, SQL y el entorno ".NET".
+                        <FormattedMessage
+                            id="about.content.third"
+                        />
                     </p>
-                    <a href={cv} className="download image" download>Descargar CV</a>
+                    <a href={cv} className="download image" download>
+                        <FormattedMessage
+                            id="about.download"
+                        />
+                    </a>
                 </div>
                 <div className="images">
                     <img src={image} alt="Pies sobre la calle"></img>

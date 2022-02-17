@@ -1,4 +1,5 @@
 import { HashLink } from "react-router-hash-link"
+import { FormattedMessage } from "react-intl"
 import linkedinImage from "../img/linkedin.png"
 import githubImage from "../img/github1.png"
 import argentinianFlag from "../img/argentina.png"
@@ -13,11 +14,21 @@ const Banner = () => {
                     <img src={americanFlag} alt="Bandera de Estados Unidos"></img>
                 </div>
                 <div className="content">
-                    <h2>Hola, soy <br></br>
+                    <h2>
+                        <FormattedMessage
+                            id="banner.welcome"
+                        /><br></br>
                         <span className="name">Dante Carrasco.</span> 
                     </h2>
-                    <p className="description">Soy un Desarrollador Web Front-End.</p>
-                    <HashLink to="/#aboutSection" className="button">Sobre mí</HashLink>
+                    <p className="description">
+                        <FormattedMessage
+                            id="banner.description"
+                        /></p>
+                    <HashLink to="/#aboutSection" className="button">
+                        <FormattedMessage
+                            id="banner.button"
+                        />
+                    </HashLink>
                 </div>
                 <ul className="media-links">
                     <li className="media-item">

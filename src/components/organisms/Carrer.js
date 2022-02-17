@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import arrowImage from "../img/down-arrow.png"
 import { useRef } from "react"
+import { FormattedMessage } from "react-intl"
 
 const Carrer = ({ title, institute, time, period, titleLink, container }) => {
     const carrerButton = useRef()
@@ -65,7 +66,9 @@ const Carrer = ({ title, institute, time, period, titleLink, container }) => {
                 href={titleLink}
                 target="_blank"
                 rel="noreferrer">
-                    Certificado
+                    <FormattedMessage
+                        id="carrer.certificate"
+                    />
                 </a>
             }
         </div>
