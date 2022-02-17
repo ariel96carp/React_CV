@@ -2,15 +2,15 @@ import "../styles/css/styles.css"
 import Header from "./sections/Header"
 import Main from "./sections/Main"
 import Footer from "./sections/Footer"
+import englishLanguage from "./lang/en-US.json"
 import { BrowserRouter as Router } from "react-router-dom"
 import { IntlProvider } from "react-intl"
-import englishLanguage from "./lang/en-US.json"
-import spanishLanguage from "./lang/es-AR.json"
+import { connect } from "react-redux"
 
-const App = () =>(
+const App = ({ language }) =>(
   <>
     <Router>
-      <IntlProvider locale="en-US" messages={englishLanguage}>
+      <IntlProvider locale={language.locale} messages={language.messages}>
           <Header />
           <Main />
           <Footer />
@@ -19,4 +19,8 @@ const App = () =>(
   </>
 )
 
-export default App;
+const mapStateToProps = (state) => ({
+  language: state.language
+})
+
+export default connect(mapStateToProps, {})(App)
