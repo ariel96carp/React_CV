@@ -1,6 +1,7 @@
 import { HashLink } from "react-router-hash-link"
 import { FormattedMessage } from "react-intl"
 import { connect } from "react-redux"
+import { useRef } from "react"
 import linkedinImage from "../img/linkedin.png"
 import githubImage from "../img/github1.png"
 import argentinianFlag from "../img/argentina.png"
@@ -8,6 +9,8 @@ import americanFlag from "../img/estados-unidos-de-america.png"
 import { changeToSpanish, changeToEnglish } from "../redux/actionscreator"
 
 const Banner = ({ addSpanish, addEnglish }) => {
+    const languageSelector = useRef()
+
     return (
         <div className="main-banner" id="bannerSection">
             <div className="wrapper">
@@ -22,6 +25,16 @@ const Banner = ({ addSpanish, addEnglish }) => {
                         alt="Bandera de Estados Unidos"
                         onClick={addEnglish}
                     />
+                    <div className="select-container">
+                        <select 
+                            name="language-selector"
+                            className="language-selector"
+                            ref={languageSelector}>
+                            <option value="english">Inglés</option>
+                            <option value="spanish">Español</option>
+                        </select>
+                        <span className="custom-arrow"></span>
+                    </div>
                 </div>
                 <div className="content">
                     <h2>

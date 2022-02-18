@@ -29,6 +29,55 @@
     }
 }
 
+.select-container{
+    position: relative;
+
+    .language-selector{
+        padding: 1em 3em 1em 1.5em;
+        border-radius: 3px;
+        border: none;
+        outline: none;
+        background-color: map-get($colors, secondary-color);
+        color: map-get($colors, primary-color);
+        cursor: pointer;
+    }
+    
+    .custom-arrow{
+        display: block;
+        background-color: hsl(37, 0, 14);
+        width: 2em;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        pointer-events: none;
+
+        &::before,
+        &::after{
+            content: "";
+            display: block;
+            width: .75em;
+            height: .5em;
+            background-color: map-get($colors, secondary-color);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &::before{
+            top: 50%;
+            clip-path: polygon(0 0, 50% 100%, 100% 0);
+            margin-top: 1px;
+        }
+
+        &::after{
+            bottom: 50%;
+            clip-path: polygon(0 100%, 50% 0, 100% 100%);
+            margin-bottom: 1px;
+        }
+    }
+}
+
 .content{
     color: map-get($colors, primary-color);
 

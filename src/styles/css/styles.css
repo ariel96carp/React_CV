@@ -567,6 +567,54 @@ header .nav.show {
   cursor: pointer;
 }
 
+.select-container {
+  position: relative;
+}
+
+.select-container .language-selector {
+  padding: 1em 3em 1em 1.5em;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  background-color: #141414;
+  color: white;
+  cursor: pointer;
+}
+
+.select-container .custom-arrow {
+  display: block;
+  background-color: #242424;
+  width: 2em;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.select-container .custom-arrow::before, .select-container .custom-arrow::after {
+  content: "";
+  display: block;
+  width: .75em;
+  height: .5em;
+  background-color: #141414;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.select-container .custom-arrow::before {
+  top: 50%;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  margin-top: 1px;
+}
+
+.select-container .custom-arrow::after {
+  bottom: 50%;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  margin-bottom: 1px;
+}
+
 .content {
   color: white;
 }

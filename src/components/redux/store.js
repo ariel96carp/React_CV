@@ -2,6 +2,8 @@ import types from "./actions"
 import englishLanguage from "../lang/en-US.json"
 import { createStore } from "redux"
 import { composeWithDevTools } from "redux-devtools-extension"
+import { persistStore, persistReducer } from "redux-persist"
+import storage from "redux-persist/lib/storage"
 
 const initialState = {
     language: {
@@ -42,4 +44,13 @@ const languageReducer = ( state = initialState, action ) => {
     }
 }
 
-export default createStore(languageReducer, composeWithDevTools())
+const persistConfig = {
+    key: "root",
+    storage
+}
+
+const persistedReducer = persistReducer(persistConfig, languageReducer)
+const store = createStore(persistedReducer, composeWithDevTools())
+
+export const persistor = persistStore(store)
+export default store
