@@ -31,7 +31,7 @@
         border-radius: 3px;
         border: none;
         outline: none;
-        background-color: map-get($colors, secondary-color);
+        background-color: hsl(172, 38, 34);
         color: map-get($colors, primary-color);
         cursor: pointer;
     }

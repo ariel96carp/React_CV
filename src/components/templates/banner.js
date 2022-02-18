@@ -26,9 +26,22 @@ const Banner = ({ appLanguage, addSpanish, addEnglish }) => {
                             value={appLanguage.description}
                             name="language-selector"
                             className="language-selector"
-                            onChange={e => changeLanguage(e.target.value)}>
-                            <option value="english">Inglés</option>
-                            <option value="spanish">Español</option>
+                            onChange={e => changeLanguage(e.target.value)}
+                        >
+                            {appLanguage.description === "spanish"
+                                ? (
+                                    <>
+                                        <option value="english">Inglés</option>
+                                        <option value="spanish">Español</option>
+                                    </>
+                                )
+                                : (
+                                    <>
+                                        <option value="english">English</option>
+                                        <option value="spanish">Spanish</option>
+                                    </>
+                                )
+                            }
                         </select>
                         <span className="custom-arrow"></span>
                     </div>
