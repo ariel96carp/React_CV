@@ -8,7 +8,8 @@ import storage from "redux-persist/lib/storage"
 const initialState = {
     language: {
         locale: "en-US",
-        messages: englishLanguage
+        description: "english",
+        messages: englishLanguage,
     }
 }
 

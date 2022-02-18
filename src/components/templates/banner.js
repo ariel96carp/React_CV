@@ -1,35 +1,32 @@
 import { HashLink } from "react-router-hash-link"
 import { FormattedMessage } from "react-intl"
 import { connect } from "react-redux"
-import { useRef } from "react"
 import linkedinImage from "../img/linkedin.png"
 import githubImage from "../img/github1.png"
-import argentinianFlag from "../img/argentina.png"
-import americanFlag from "../img/estados-unidos-de-america.png"
 import { changeToSpanish, changeToEnglish } from "../redux/actionscreator"
 
-const Banner = ({ addSpanish, addEnglish }) => {
-    const languageSelector = useRef()
+const Banner = ({ appLanguage, addSpanish, addEnglish }) => {
+    const changeLanguage = (language) => {
+        switch(language)
+        {
+            case "spanish":
+                addSpanish()
+                break
+            default:
+                addEnglish()
+        }
+    }
 
     return (
         <div className="main-banner" id="bannerSection">
             <div className="wrapper">
                 <div className="lenguages">
-                    <img 
-                        src={argentinianFlag} 
-                        alt="Bandera de Argentina"
-                        onClick={addSpanish}
-                    />
-                    <img 
-                        src={americanFlag} 
-                        alt="Bandera de Estados Unidos"
-                        onClick={addEnglish}
-                    />
                     <div className="select-container">
                         <select 
+                            value={appLanguage.description}
                             name="language-selector"
                             className="language-selector"
-                            ref={languageSelector}>
+                            onChange={e => changeLanguage(e.target.value)}>
                             <option value="english">Inglés</option>
                             <option value="spanish">Español</option>
                         </select>
@@ -76,6 +73,10 @@ const Banner = ({ addSpanish, addEnglish }) => {
     )
 }
 
+const mapStateToProps = (state) => ({
+    appLanguage: state.language
+})
+
 const mapDispatchToProps = dispatch => ({
     addSpanish(){
         dispatch(changeToSpanish())
@@ -85,4 +86,4 @@ const mapDispatchToProps = dispatch => ({
     }
 })
 
-export default connect(null, mapDispatchToProps)(Banner)
+export default connect(mapStateToProps, mapDispatchToProps)(Banner)

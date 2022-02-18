@@ -19,14 +19,8 @@
 
 .lenguages{
     display: flex;
-    gap: .75em;
     justify-content: flex-end;
     align-items: center;
-
-    img{
-        height: 2em;
-        cursor: pointer;
-    }
 }
 
 .select-container{
