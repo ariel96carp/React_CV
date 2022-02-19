@@ -570,7 +570,7 @@ header .nav.show {
   border-radius: 3px;
   border: none;
   outline: none;
-  background-color: #36786f;
+  background-color: #141414;
   color: white;
   cursor: pointer;
 }
@@ -584,6 +584,7 @@ header .nav.show {
   top: 0;
   right: 0;
   pointer-events: none;
+  border-left: 1px solid white;
 }
 
 .select-container .custom-arrow::before, .select-container .custom-arrow::after {
