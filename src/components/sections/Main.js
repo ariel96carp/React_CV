@@ -1,14 +1,26 @@
 import Home from "../pages/Home"
-import { Routes, Route } from "react-router"
+import Error404 from "../pages/Error404"
+import { Routes, Route, useLocation } from "react-router"
+import classNames from "classnames"
 
 const Main = () => {
+    const location = useLocation()
+    const pathname = location.pathname
+    
+    const mainClassName = classNames({
+        "home-main": pathname === "/",
+        "error-main": pathname !== "/"
+    })
+
     return (
-        <main>
+        <main className={mainClassName}>
             <Routes>
                 <Route path="/" element={
                     <Home />
-                }>
-                </Route>
+                } />
+                <Route path="*" element={
+                    <Error404 />
+                } />
             </Routes>
         </main>
     )

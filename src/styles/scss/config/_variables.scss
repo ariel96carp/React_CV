@@ -75,8 +75,21 @@ $colors:(
         format("woff2");
 }
 
+@font-face{
+    font-family: "black-font";
+    font-style: normal;
+    font-weight: 900;
+    font-display: fallback;
+    src: 
+        local("poppins-black"), 
+        local("Poppins-Black"), 
+        url(../fonts/Poppins-Black.ttf)
+        format("truetype");
+}
+
 :root{
     --regular-font: "regular-font", sans serif;
     --medium-font: "medium-font", sans serif;
     --bold-font: "bold-font", san serif;
+    --black-font: "black-font", san serif;
 }

@@ -40,10 +40,19 @@
   src: local("poppins-bold"), local("Poppins-Bold"), url(../fonts/Poppins-Bold.woff2) format("woff2");
 }
 
+@font-face {
+  font-family: "black-font";
+  font-style: normal;
+  font-weight: 900;
+  font-display: fallback;
+  src: local("poppins-black"), local("Poppins-Black"), url(../fonts/Poppins-Black.ttf) format("truetype");
+}
+
 :root {
   --regular-font: "regular-font", sans serif;
   --medium-font: "medium-font", sans serif;
   --bold-font: "bold-font", san serif;
+  --black-font: "black-font", san serif;
 }
 
 .wrapper {
@@ -1140,6 +1149,50 @@ footer p {
 .google-info h3 {
   color: #141414;
   font-size: 1em;
+}
+
+.error-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+}
+
+.error-container {
+  --margin-bottom: .75rem;
+  color: #595959;
+}
+
+.error-container .error-description,
+.error-container .error-status,
+.error-container .error-title {
+  font-family: var(--medium-font);
+  margin-bottom: var(--margin-bottom);
+}
+
+.error-container .error-description {
+  margin-top: 0;
+}
+
+.error-container .error-status {
+  font-size: 9em;
+  font-family: var(--black-font);
+  letter-spacing: .1em;
+}
+
+.error-container .home-link {
+  color: white;
+  background-color: #e88354;
+  text-decoration: none;
+  display: inline-block;
+  padding: .75em;
+  border-radius: 25px;
+}
+
+@media screen and (min-width: 40rem) {
+  .error-container {
+    --margin-bottom: 1rem;
+  }
 }
 
 html {

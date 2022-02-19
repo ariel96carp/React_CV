@@ -1,0 +1,41 @@
+.error-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+}
+
+.error-container{
+    --margin-bottom: .75rem;
+    color: map-get($colors, tertiary-color);
+
+    .error-description,
+    .error-status,
+    .error-title{
+        font-family: var(--medium-font);
+        margin-bottom: var(--margin-bottom);
+    }
+
+    .error-description{
+        margin-top: 0;
+    }
+
+    .error-status{
+        font-size: 9em;
+        font-family: var(--black-font);
+        letter-spacing: .1em;
+    }
+
+    .home-link{
+        color: map-get($colors, primary-color);
+        background-color: hsl(19, 76, 62);
+        text-decoration: none;
+        display: inline-block;
+        padding: .75em;
+        border-radius: 25px;
+    }
+
+    @include media-quarie(medium){
+        --margin-bottom: 1rem;
+    }
+}
