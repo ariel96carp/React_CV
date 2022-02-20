@@ -17,10 +17,10 @@
     right: 10px;
     bottom: 10px;
     cursor: pointer;
-    z-index: var(--z-fixed);
     opacity: 0;
     transition: opacity .5s;
     pointer-events: none;
+    z-index: var(--z-fixed);
 
     a{
         height: 100%;

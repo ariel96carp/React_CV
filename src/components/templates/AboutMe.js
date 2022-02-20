@@ -1,4 +1,4 @@
-import image from "../img/Shoes-feet-street_m.webp"
+import image from "../img/nueva.webp"
 import cv from "../../cv/Desarrollador_Web_Front-End_JrTrainee_compressed.pdf"
 import { FormattedMessage } from "react-intl"
 

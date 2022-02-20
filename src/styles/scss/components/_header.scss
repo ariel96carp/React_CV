@@ -23,6 +23,7 @@
         nav{
             background-color: map-get($colors, secondary-color);
 
+
             @include media-quarie(medium){
                 background-color: transparent;
             }
