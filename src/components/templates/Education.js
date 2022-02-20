@@ -11,13 +11,13 @@ const Education = () => {
 
     return (
         <section className="education section-padding" id="educationSection">
-            <div className="description-container">
+            <div className="description-container center-content">
                 <div className="wrapper">
-                    <h2 className="center-content">
+                    <h2>
                         <FormattedMessage
                             id="education.title"
                         /></h2>
-                    <p className="description center-content">
+                    <p className="description">
                         <FormattedMessage
                             id="education.description"
                         /></p>

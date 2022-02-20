@@ -3,7 +3,7 @@ import jsImage from "../img/js.png"
 import cssImage from "../img/css-3.png"
 import scssImage from "../img/sass.png"
 import reactImage from "../img/physics.png"
-import htmlImage from "../img/html-5.png"
+import htmlImage from "../img/html.png"
 import csharpImage from "../img/c-sharp.png"
 import sqlImage from "../img/sql.png"
 import gitImage from "../img/github.png"
@@ -49,7 +49,7 @@ const Skills = () => {
                         image={reactImage} />
                     <Skill 
                         tecnology="Redux" 
-                        level={basicLevel} 
+                        level={intermediateLevel} 
                         image={reduxImage} />
                     <Skill 
                         tecnology="HTML5" 

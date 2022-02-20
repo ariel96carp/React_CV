@@ -53,6 +53,12 @@
         padding: .75em;
         border-radius: 25px;
         text-transform: uppercase;
+
+        @media (pointer: fine){
+            &:hover{
+                background-color: hsl(19, 90, 55);
+            }    
+        }
     }
 
     @include media-quarie(medium){
