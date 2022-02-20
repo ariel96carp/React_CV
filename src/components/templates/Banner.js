@@ -5,7 +5,7 @@ import linkedinImage from "../img/linkedin.png"
 import githubImage from "../img/github1.png"
 import { changeToSpanish, changeToEnglish } from "../redux/actionscreator"
 
-const MainBanner = ({ appLanguage, addSpanish, addEnglish }) => {
+const Banner = ({ appLanguage, addSpanish, addEnglish }) => {
     const changeLanguage = (language) => {
         switch(language)
         {
@@ -99,4 +99,4 @@ const mapDispatchToProps = dispatch => ({
     }
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(MainBanner)
+export default connect(mapStateToProps, mapDispatchToProps)(Banner)

@@ -1,8 +1,8 @@
-import MainBanner from "../templates/Banner"
+import Banner from "../templates/Banner"
 import AboutMe from "../templates/AboutMe"
-import Education from "../templates/educationn"
-import ContactInfo from "../templates/Contact"
-import Skills from "../templates/skillss"
+import Education from "../templates/Education"
+import Contact from "../templates/Contact"
+import Skills from "../templates/Skills"
 import { useEffect } from "react"
 
 const Home = () => {
@@ -16,11 +16,11 @@ const Home = () => {
 
     return (
         <>
-            <MainBanner />
+            <Banner />
             <AboutMe />
             <Skills />
             <Education />
-            <ContactInfo />
+            <Contact />
         </>
     )
 }
