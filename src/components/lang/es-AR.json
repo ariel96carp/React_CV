@@ -72,5 +72,8 @@
     "carrer.title-spaWithJavascript": "Single Page Application con Javascript",
     "carrer.title-reactFromScratch": "React Desde Cero",
     "carrer.title-reactState": "React - Manejo del Estado de la Aplicación",
-    "carrer.title-reactEducationPlatform": "Plataforma de Educación Online React JS"
+    "carrer.title-reactEducationPlatform": "Plataforma de Educación Online React JS",
+    "error404.title": "Ups.. la página no pudo ser encontrada.",
+    "error404.description": "No pudimos encontrar la página que estás buscando.",
+    "error404.button": "Volver al inicio"
 }

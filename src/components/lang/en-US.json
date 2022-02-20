@@ -72,5 +72,8 @@
     "carrer.title-spaWithJavascript": "Single Page Application With Javascript",
     "carrer.title-reactFromScratch": "React From Scratch",
     "carrer.title-reactState": "React - Application State Management",
-    "carrer.title-reactEducationPlatform": "Online Education Platform With React JS"
+    "carrer.title-reactEducationPlatform": "Online Education Platform With React JS",
+    "error404.title": "Oops! Page not found.",
+    "error404.description": "We can't find the page you're looking for.",
+    "error404.button": "Go back home"
 }

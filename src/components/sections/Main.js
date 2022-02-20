@@ -11,7 +11,7 @@ const Main = () => {
         "home-main": pathname === "/",
         "error-main": pathname !== "/"
     })
-
+    
     return (
         <main className={mainClassName}>
             <Routes>

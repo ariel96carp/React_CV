@@ -313,21 +313,29 @@ body {
 
 @media screen and (min-width: 20rem) {
   body {
-    font-size: calc(0.75rem + (0.3125) * ((100vw - 20rem) / 44));
+    font-size: calc(0.75rem + (0.3125) * ((100vw - 20rem) / 70));
   }
 }
 
-@media screen and (min-width: 64rem) {
+@media screen and (min-width: 90rem) {
   body {
     font-size: 1.0625rem;
   }
 }
 
 #root {
+  display: grid;
+}
+
+.home-body #root {
   margin-top: var(--header-size);
   min-height: calc(100vh - var(--header-size));
-  display: grid;
   grid-template-rows: auto min-content;
+}
+
+.error-body #root {
+  min-height: 100vh;
+  grid-template-rows: min-content auto min-content;
 }
 
 ul {
@@ -361,7 +369,7 @@ button, .button {
   letter-spacing: .05rem;
 }
 
-header {
+.home-header {
   --background-transition: background-color .5s;
   --toggle-color: white;
   position: fixed;
@@ -375,26 +383,26 @@ header {
   transition: var(--background-transition);
 }
 
-header.scroll-header {
+.home-header.scroll-header {
   --toggle-color: black;
   background-color: white;
 }
 
-header.scroll-header a {
+.home-header.scroll-header a {
   color: #141414;
 }
 
-header.scroll-header nav {
+.home-header.scroll-header nav {
   background-color: #141414;
 }
 
 @media screen and (min-width: 40rem) {
-  header.scroll-header nav {
+  .home-header.scroll-header nav {
     background-color: transparent;
   }
 }
 
-header.scroll-header::after {
+.home-header.scroll-header::after {
   content: "";
   display: block;
   position: absolute;
@@ -412,12 +420,12 @@ header.scroll-header::after {
 }
 
 @media screen and (min-width: 40rem) {
-  header.scroll-header::after {
+  .home-header.scroll-header::after {
     width: 88%;
   }
 }
 
-header .wrapper {
+.home-header .wrapper {
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -431,27 +439,27 @@ header .wrapper {
         SE UBICA POR DETRAS DEL HEADER, CUANDO EN REALIDAD LO HACE POR DETRAS DEL WRAPPER. */
 }
 
-header .wrapper.scroll-wrapper {
+.home-header .wrapper.scroll-wrapper {
   background-color: white;
 }
 
-header .title {
+.home-header .title {
   font-family: var(--bold-font);
   font-size: 1.5em;
 }
 
-header a {
+.home-header a {
   color: white;
 }
 
-header .menu-toggle {
+.home-header .menu-toggle {
   width: 2.2em;
   height: 1.6em;
   cursor: pointer;
   position: relative;
 }
 
-header .menu-toggle::before {
+.home-header .menu-toggle::before {
   content: "";
   display: block;
   position: absolute;
@@ -463,7 +471,7 @@ header .menu-toggle::before {
   border-radius: 3px 0 0 3px;
 }
 
-header .menu-toggle::after {
+.home-header .menu-toggle::after {
   content: "";
   display: block;
   position: absolute;
@@ -475,7 +483,7 @@ header .menu-toggle::after {
   border-radius: 3px 0 0 3px;
 }
 
-header .menu-toggle .middle {
+.home-header .menu-toggle .middle {
   position: absolute;
   top: 50%;
   right: 0;
@@ -487,12 +495,12 @@ header .menu-toggle .middle {
 }
 
 @media screen and (min-width: 40rem) {
-  header .menu-toggle {
+  .home-header .menu-toggle {
     display: none;
   }
 }
 
-header .nav {
+.home-header .nav {
   position: fixed;
   top: var(--header-size);
   right: -100vw;
@@ -502,7 +510,7 @@ header .nav {
 }
 
 @media screen and (min-width: 40rem) {
-  header .nav {
+  .home-header .nav {
     position: static;
     width: auto;
     height: auto;
@@ -510,7 +518,7 @@ header .nav {
   }
 }
 
-header .nav.show {
+.home-header .nav.show {
   right: 0;
   transition: right .5s;
 }
@@ -1155,7 +1163,7 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+  background: linear-gradient(to right, #d3cce3, #e9e4f0);
 }
 
 .error-container {
