@@ -30,9 +30,9 @@ const Contact = () => {
         }
 
         window.addEventListener("scroll", toggleWhatsappLink)
-        return(() => {
+        return () => {
             window.removeEventListener("scroll", toggleWhatsappLink)
-        })
+        }
     }, [])
 
     return (

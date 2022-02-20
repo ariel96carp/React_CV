@@ -83,8 +83,8 @@ $colors:(
     src: 
         local("poppins-black"), 
         local("Poppins-Black"), 
-        url(../fonts/Poppins-Black.ttf)
-        format("truetype");
+        url(../fonts/Poppins-Black.woff2)
+        format("woff2");
 }
 
 :root{

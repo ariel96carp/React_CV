@@ -1,8 +1,8 @@
-import Banner from "../templates/banner"
-import AboutMe from "../templates/about-me"
-import Education from "../templates/education"
-import Contact from "../templates/contact"
-import Skills from "../templates/skills"
+import Banner from "../templates/Banner"
+import AboutMe from "../templates/AboutMe"
+import Education from "../templates/Education"
+import Contact from "../templates/Contact"
+import Skills from "../templates/Skills"
 import { useEffect } from "react"
 
 const Home = () => {

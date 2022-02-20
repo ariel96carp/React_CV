@@ -10,10 +10,10 @@ const CarrerContainer = ({ title, institute, time, period, titleLink, carrersArr
         }, 100)
 
         window.addEventListener("resize", setElementHeight)
-        return (() => {
+        return () => {
             window.removeEventListener("resize", setElementHeight)
             clearTimeout(setInitialHeight)
-        })
+        }
     }, [])
 
     const setElementHeight = () => {

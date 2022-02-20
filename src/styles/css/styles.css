@@ -45,7 +45,7 @@
   font-style: normal;
   font-weight: 900;
   font-display: fallback;
-  src: local("poppins-black"), local("Poppins-Black"), url(../fonts/Poppins-Black.ttf) format("truetype");
+  src: local("poppins-black"), local("Poppins-Black"), url(../fonts/Poppins-Black.woff2) format("woff2");
 }
 
 :root {
@@ -1186,6 +1186,23 @@ footer p {
   font-size: 9em;
   font-family: var(--black-font);
   letter-spacing: .1em;
+  animation: bounce 2.5s both infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 .error-container .home-link {
