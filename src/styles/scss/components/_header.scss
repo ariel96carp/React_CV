@@ -7,10 +7,7 @@
     left: 0;
     height: var(--header-size);
     width: 100%;
-    z-index: var(--z-modal);
-    /* Para que el "nav", cuando sea RESPONSIVE, pueda ubicarse por ENCIMA del símbolo de whatsapp,
-    la PROPIEDAD "z-index" debe ser MAYOR al de ESTE. Por eso se utiliza la variable "--z-modal" y
-    NO "--z-fixed". */
+    z-index: var(--z-fixed);
     background-color: map-get($colors, secondary-color);
     color: map-get($colors, primary-color);
     transition: var(--background-transition);
