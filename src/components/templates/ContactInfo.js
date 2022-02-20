@@ -4,7 +4,7 @@ import WhatsappLink from "../Atoms/WhatsappLink"
 import { useRef, useEffect } from "react"
 import { FormattedMessage } from "react-intl"
 
-const Contact = () => {
+const ContactInfo = () => {
     const contactSection = useRef()
     const whatsappRef = useRef()
     useEffect(() => {
@@ -131,4 +131,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default ContactInfo
