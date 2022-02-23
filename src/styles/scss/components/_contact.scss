@@ -83,6 +83,23 @@
     }
 }
 
+.map-status{
+    margin-bottom: 0;
+    
+    &.loading{
+        animation: message 1s alternate infinite ease-in-out;
+
+        @keyframes message {
+            0%{
+                opacity: .2;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    }
+}
+
 .map-container{
     @include responsive-ratio(16, 9);
 }

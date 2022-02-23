@@ -1,5 +1,6 @@
 import { useLoadScript, GoogleMap, Marker } from "@react-google-maps/api"
 import { useRef, useCallback, useState, useEffect } from "react"
+import { FormattedMessage } from "react-intl"
 
 const Map = () => {
     const googleApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY
@@ -10,6 +11,7 @@ const Map = () => {
         lng: lngCoordinate
     }
     const [ coordinates, setCoordinates ] = useState([myCoordinates])
+    const [ userLocation, setUserLocation ] = useState(false)
     const mapRef = useRef()
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(
@@ -22,8 +24,9 @@ const Map = () => {
                             lng: position.coords.longitude
                         }
                     ])
+                setUserLocation(true)
             },
-            () => null
+            () => setUserLocation(true)
         )
     }, [])
 
@@ -45,32 +48,43 @@ const Map = () => {
         googleMapsApiKey: googleApiKey
     })
 
-    if (loadError) return <p>El mapa no pudo cargarse.</p>
-    if (!isLoaded) return <p>Cargando mapa...</p>
-
+    if (loadError) return <p className="map-status">El mapa no pudo cargarse.</p>
+    if (!isLoaded || !userLocation )
+    {
+        return (
+            <p className="map-status loading">
+                <FormattedMessage
+                    id="map-status.loading"
+                />
+            </p>
+        )
+    }
+        
     return (
-        <GoogleMap
-        mapContainerStyle={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%"
-        }} 
-        options={{
-            disableDefaultUI: true,
-            zoomControl: true
-        }}
-        onLoad={onMapLoad}>
-            {coordinates.map((marker, index) => 
-                <Marker
-                key={index + 1}
-                position={{
-                    lat: marker.lat,
-                    lng: marker.lng
-                }} />
-            )}
-        </GoogleMap>
+        <div className="map-container">
+            <GoogleMap
+                mapContainerStyle={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%"
+                }} 
+                options={{
+                    disableDefaultUI: true,
+                    zoomControl: true
+                }}
+                onLoad={onMapLoad}>
+                    {coordinates.map((marker, index) => 
+                        <Marker
+                        key={index + 1}
+                        position={{
+                            lat: marker.lat,
+                            lng: marker.lng
+                        }} />
+                )}
+            </GoogleMap>
+        </div>
     )
 }
 

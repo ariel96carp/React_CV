@@ -75,5 +75,6 @@
     "carrer.title-reactEducationPlatform": "Online Education Platform With React JS",
     "error404.title": "Oops! Page not found.",
     "error404.description": "We can't find the page you're looking for.",
-    "error404.button": "Go back home"
+    "error404.button": "Go back home",
+    "map-status.loading": "Loading map..."
 }

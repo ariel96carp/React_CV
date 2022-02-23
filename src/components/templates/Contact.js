@@ -74,9 +74,7 @@ const Contact = () => {
                                     </p> 
                                 </div>
                             </div>
-                            <div className="map-container">
-                                <Map />
-                            </div>
+                            <Map />
                         </div>
                         <div className="contact-box">
                             <div className="detail">

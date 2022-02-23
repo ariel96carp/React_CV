@@ -919,6 +919,23 @@ button, .button {
   color: #8000db;
 }
 
+.map-status {
+  margin-bottom: 0;
+}
+
+.map-status.loading {
+  animation: message 1s alternate infinite ease-in-out;
+}
+
+@keyframes message {
+  0% {
+    opacity: .2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .map-container {
   display: grid;
   grid-template-columns: repeat(16, 1fr);
