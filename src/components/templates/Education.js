@@ -189,6 +189,12 @@ const Education = () => {
                         time={`14 ${time}`}
                         period="2021" 
                         titleLink="https://ed.team/@dantecarrasco/curso/css-avanzado" />
+                    <Carrer
+                        title={intl.formatMessage({ id: "carrer.title-tsFromScratch" })}
+                        institute={edteam}
+                        time={`5 ${time}`}
+                        period="2022"
+                        titleLink="https://app.ed.team/@dantecarrasco/curso/typescript" />
                 </div>
             </div>
         </section>
