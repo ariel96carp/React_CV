@@ -1,5 +1,5 @@
 import image from "../img/nueva.webp"
-import cv from "../../cv/Desarrollador_Web_Front-End_JrTrainee_compressed.pdf"
+import cv from "../../cv/CV_Dante_Carrasco.pdf"
 import { FormattedMessage } from "react-intl"
 
 const AboutMe = () => {
