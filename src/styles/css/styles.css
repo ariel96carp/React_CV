@@ -523,32 +523,39 @@ button, .button {
   transition: right .5s;
 }
 
+.menu {
+  font-size: 1.3em;
+  padding-top: 3em;
+}
+
 @media screen and (min-width: 40rem) {
   .menu {
     display: flex;
+    font-size: 1em;
+    padding-top: 0;
   }
 }
 
-.menu .item {
+.menu .link {
   padding: 1em;
   width: 100%;
   color: #141414;
 }
 
 @media screen and (min-width: 40rem) {
-  .menu .item {
-    padding: .5em;
+  .menu .link {
+    padding: .5em .75em;
     width: auto;
     color: white;
   }
 }
 
-.menu.scroll-menu .item {
+.menu.scroll-menu .link {
   color: white;
 }
 
 @media screen and (min-width: 40rem) {
-  .menu.scroll-menu .item {
+  .menu.scroll-menu .link {
     color: #141414;
   }
 }

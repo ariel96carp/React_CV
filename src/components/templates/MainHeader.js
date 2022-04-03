@@ -92,7 +92,7 @@ const MainHeader = () => {
                         <li className="item center-content">
                             <HashLink 
                                 to="/#bannerSection" 
-                                className="item" 
+                                className="link" 
                                 onClick={hideMenuFromItem}>
                                     <FormattedMessage
                                         id="header.home"
@@ -102,7 +102,7 @@ const MainHeader = () => {
                         <li className="item center-content">
                             <HashLink 
                                 to="/#aboutSection" 
-                                className="item" 
+                                className="link" 
                                 onClick={hideMenuFromItem}>
                                     <FormattedMessage
                                         id="header.about"
@@ -112,7 +112,7 @@ const MainHeader = () => {
                         <li className="item center-content">
                             <HashLink 
                                 to="/#skillsSection" 
-                                className="item" 
+                                className="link" 
                                 onClick={hideMenuFromItem}>
                                 <FormattedMessage
                                     id="header.skills"
@@ -122,7 +122,7 @@ const MainHeader = () => {
                         <li className="item center-content">
                             <HashLink 
                                 to="/#educationSection" 
-                                className="item" 
+                                className="link" 
                                 onClick={hideMenuFromItem}>
                                 <FormattedMessage
                                     id="header.education"
@@ -132,7 +132,7 @@ const MainHeader = () => {
                         <li className="item center-content">
                             <HashLink 
                                 to="/#contactSection" 
-                                className="item" 
+                                className="link" 
                                 onClick={hideMenuFromItem}>
                                 <FormattedMessage
                                     id="header.contact"

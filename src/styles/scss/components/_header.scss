@@ -115,24 +115,29 @@
 }
 
 .menu{
+    font-size: 1.3em;
+    padding-top: 3em;
+
     @include media-quarie(medium){
         display: flex;
+        font-size: 1em;
+        padding-top: 0;
     }
 
-    .item{
+    .link{
         padding: 1em;
         width: 100%;
         color: map-get($colors, secondary-color);
 
         @include media-quarie(medium){
-            padding: .5em;
+            padding: .5em .75em;
             width: auto;
             color: map-get($colors, primary-color);
         }
     }
 
     &.scroll-menu{
-        .item{
+        .link{
             color: map-get($colors, primary-color);
             
             @include media-quarie(medium){
